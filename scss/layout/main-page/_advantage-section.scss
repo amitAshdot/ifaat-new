@@ -1,0 +1,43 @@
+.advantage {
+    &-section {
+        position: relative;
+        padding-block-start: 4rem;
+        padding-block-end: 4rem;
+        padding-inline-start: 3rem;
+        padding-inline-end: 3rem;
+        width: 60vw;
+        text-align: center;
+        margin: auto;
+        margin-block-end: 5rem;
+        background: rgba($color: $color-primary, $alpha: 0.19);
+        // border: 1px solid red;
+
+        @include respond(mini-desktop) {
+            flex-direction: column;
+            padding-inline-start: 5rem;
+            padding-inline-end: 5rem;
+        }
+    }
+
+    &-title {
+        color: $color-primary;
+        font-size: 2rem;
+        font-family: 'rubikBold', sans-serif;
+        line-height: initial;
+        margin-block-end: 2rem;
+    }
+
+    &-text {
+        font-weight: 100;
+        text-align: right;
+        line-height: initial;
+        margin-block-end: 2rem;
+    }
+
+    &-dont-miss {
+        color: $color-primary;
+        font-family: 'rubikBold', sans-serif;
+        font-size: 2rem;
+        line-height: initial;
+    }
+}

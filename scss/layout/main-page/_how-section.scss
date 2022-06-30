@@ -1,0 +1,114 @@
+.how {
+    &-section {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-block-start: 4rem;
+        padding-block-end: 4rem;
+        padding-inline-start: 4rem;
+        padding-inline-end: 4rem;
+        // border: 1px solid orangered;
+
+        width: 86vw;
+        width: 86%;
+        // height: 12.6vw;
+        top: 22rem;
+        right: 7vw;
+        border-radius: 30px;
+        background: $color-secondary;
+
+        @include respond(big-desktop-min) {
+            width: 86%;
+        }
+
+        @include respond(mini-desktop) {
+            padding-block-start: 10rem;
+            padding-block-end: 10rem;
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 100%;
+            border-radius: 0;
+        }
+    }
+
+    &-title {
+        color: $color-white;
+        line-height: 1.2rem;
+        font-size: 1.5rem;
+        width: fit-content;
+
+        @include respond(mini-desktop) {
+            line-height: 6.8rem;
+            font-size: 6.8rem;
+            margin-block-end: 3rem;
+        }
+    }
+
+    &-steps {
+        display: flex;
+        align-items: start;
+        // align-items: center;
+        margin-block-start: 1rem;
+        gap: 1rem;
+
+        @include respond(mini-desktop) {
+            flex-direction: column;
+            align-items: center;
+            gap: 5rem;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+    }
+
+    &-step {
+        display: flex;
+        flex-direction: column;
+        color: $color-white;
+
+        @include respond(mini-desktop) {
+            gap: 3rem;
+        }
+
+        &-image {
+            width: 3rem;
+            height: 3rem;
+            align-self: center;
+
+            @include respond(mini-desktop) {
+                width: 8rem;
+                height: 8rem;
+            }
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &-text {
+            margin-block-start: 1rem;
+            // font-size: 1.5rem;
+        }
+
+        &-description {
+            font-size: 0.9rem;
+            line-height: 0.95rem;
+            text-align: center;
+
+            @include respond(mini-desktop) {
+                font-size: 4rem;
+                line-height: 4.5rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.arrow-image {
+    width: 3rem;
+    filter: invert(1);
+}
