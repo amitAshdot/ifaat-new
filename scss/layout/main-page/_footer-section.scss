@@ -117,6 +117,7 @@
             color: white;
             font-size: 1rem;
             padding-block-end: 0.5rem;
+            cursor: pointer;
 
             &:focus+label {
                 color: white;
@@ -136,6 +137,7 @@
             font-size: 1rem;
             margin-block-start: 2rem;
             margin-block-end: 2rem;
+            cursor: pointer;
         }
     }
 
@@ -147,8 +149,6 @@
         top: 15%;
         border: 1px solid white;
         display: none;
-
-
 
         & p {
             color: #fff;
