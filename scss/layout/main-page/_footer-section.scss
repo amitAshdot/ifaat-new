@@ -16,6 +16,8 @@
 
         @include respond(mini-desktop) {
             margin-block-end: 4rem;
+            display: none;
+            width: 100%;
         }
 
         & p {
