@@ -1762,6 +1762,15 @@ body:not(.tabbed) *:focus {
   font-size: 1rem;
 }
 
+@media only screen and (max-width: 58.75em) {
+  .form .message.error {
+    top: 71%;
+    font-size: 4rem;
+    width: 95%;
+    padding: 5rem;
+  }
+}
+
 .form-row input {
   width: 100%;
   border: none;
@@ -1853,10 +1862,24 @@ body:not(.tabbed) *:focus {
   display: none;
 }
 
+@media only screen and (max-width: 58.75em) {
+  .form .divhidden {
+    top: 10rem;
+    padding: 22.5rem 2rem;
+  }
+}
+
 .form .divhidden p {
   color: #fff;
   font-size: 1.5rem;
   line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 58.75em) {
+  .form .divhidden p {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+  }
 }
 
 .form .divhidden a {
@@ -1866,6 +1889,13 @@ body:not(.tabbed) *:focus {
 
 .form .divhidden a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 58.75em) {
+  .form .divhidden a {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+  }
 }
 
 .form .text-white {

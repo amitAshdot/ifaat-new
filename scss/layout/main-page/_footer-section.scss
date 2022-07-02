@@ -189,6 +189,13 @@
             color: $color-white;
             // color: #ef4a4a;
             font-size: 1rem;
+
+            @include respond(tab-port) {
+                top: 71%;
+                font-size: 4rem;
+                width: 95%;
+                padding: 5rem;
+            }
         }
     }
 
@@ -278,10 +285,20 @@
         border: 1px solid white;
         display: none;
 
+        @include respond(tab-port) {
+            top: 10rem;
+            padding: 22.5rem 2rem;
+        }
+
         & p {
             color: #fff;
             font-size: 1.5rem;
             line-height: 1.5rem;
+
+            @include respond(tab-port) {
+                font-size: 6.5rem;
+                line-height: 6.5rem;
+            }
         }
 
         & a {
@@ -290,6 +307,11 @@
 
             &:hover {
                 text-decoration: underline;
+            }
+
+            @include respond(tab-port) {
+                font-size: 6.5rem;
+                line-height: 6.5rem;
             }
         }
 
