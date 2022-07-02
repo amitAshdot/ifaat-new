@@ -49,7 +49,7 @@
             @include respond(mini-desktop) {
                 width: 109%;
                 height: auto;
-                transform: translate(4.5%, -5%);
+                transform: translate(6rem, 0rem);
             }
         }
 
@@ -63,7 +63,7 @@
             color: $color-black;
 
             @include respond(mini-desktop) {
-                transform: translate(-50%, -18.5rem);
+                transform: translate(-50%, -15.5rem);
             }
         }
     }
@@ -136,7 +136,7 @@
             font-size: 5.5rem;
             line-height: 5.5rem;
             margin: auto;
-            width: 80%;
+            width: 75%;
         }
     }
 

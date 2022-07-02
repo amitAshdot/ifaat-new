@@ -1075,7 +1075,7 @@ body:not(.tabbed) *:focus {
   .about-right-image {
     width: 109%;
     height: auto;
-    transform: translate(4.5%, -5%);
+    transform: translate(6rem, 0rem);
   }
 }
 
@@ -1091,7 +1091,7 @@ body:not(.tabbed) *:focus {
 
 @media only screen and (max-width: 66.875em) {
   .about-right .centered {
-    transform: translate(-50%, -18.5rem);
+    transform: translate(-50%, -15.5rem);
   }
 }
 
@@ -1172,7 +1172,7 @@ body:not(.tabbed) *:focus {
     font-size: 5.5rem;
     line-height: 5.5rem;
     margin: auto;
-    width: 80%;
+    width: 75%;
   }
 }
 
