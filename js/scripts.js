@@ -170,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
         speed: 300,
         slidesToShow: 5.5,
         slidesToScroll: 3,
+        nextArrow: $('.slick-next'),
         // centerPadding: '760px',
         // rtl: true,
         responsive: [

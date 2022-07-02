@@ -4,6 +4,10 @@
     direction: ltr;
     overflow: visible;
 
+    @include respond(mini-desktop) {
+        padding-inline-start: 10rem;
+    }
+
     &-section {
         position: relative;
         // display: flex;
@@ -19,7 +23,7 @@
             flex-direction: column;
             padding-inline-start: 5rem;
             padding-inline-end: 5rem;
-            margin-block-start: 10rem;
+            margin-block-start: 7rem;
         }
     }
 
@@ -56,6 +60,10 @@
         // min-height: 16.5rem;
         box-shadow: 0px 1px 6px rgba($color-black, 0.2);
         // border: 1px solid purple;
+
+        @include respond(mini-desktop) {
+            display: flex !important;
+        }
 
         &-container {
             position: relative;
@@ -156,7 +164,7 @@
 
             @include respond(mini-desktop) {
                 font-size: 3rem;
-                line-height: 3.3rem;
+                line-height: inherit;
             }
         }
     }
@@ -200,9 +208,18 @@
     &-next {
         position: absolute;
         top: 50%;
-        left: -4rem;
-        transform: translateY(-50%);
+        left: 0rem;
+        transform: translate(50%, 0%);
+        z-index: 5;
 
-        border: solid 1px red;
+        // border: solid 1px red;
+        @include respond(mini-desktop) {
+            position: absolute;
+            width: 7.5rem;
+            top: 50%;
+            left: 0rem;
+            transform: translate(50%, -50%);
+        }
+
     }
 }
