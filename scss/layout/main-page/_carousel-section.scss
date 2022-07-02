@@ -18,6 +18,7 @@
             flex-direction: column;
             padding-inline-start: 5rem;
             padding-inline-end: 5rem;
+            margin-block-start: 15rem;
         }
     }
 
@@ -32,8 +33,9 @@
         // font-size: 4.1rem;
 
         @include respond(mini-desktop) {
-            line-height: 6.8rem;
-            font-size: 6.8rem;
+            line-height: 4.5rem;
+            font-size: 4.5rem;
+            padding-inline-start: 0;
             margin-block-end: 1rem;
             width: 100%;
             text-align: center;
@@ -61,8 +63,14 @@
             gap: 1rem;
             // padding-block-start: 1rem;
             padding-block-end: 0.5rem;
+
             // padding-inline: 1rem;
             // height: 15rem;
+            @include respond(mini-desktop) {
+                // min-height: 45rem;
+                display: flex;
+                justify-content: center;
+            }
 
             & .icon {
                 max-height: 7rem;
@@ -77,8 +85,13 @@
             margin: auto;
             object-fit: scale-down;
             display: block;
-            width: 100%;
+            width: auto;
             height: 2.5rem;
+
+            @include respond(mini-desktop) {
+                height: 7rem;
+            }
+
         }
 
         & .category {
@@ -93,10 +106,25 @@
             right: 50%;
             transform: translateX(50%);
             width: 100%;
+
+            @include respond(mini-desktop) {
+                font-size: 4rem;
+                line-height: 4rem;
+                top: 11rem;
+                position: relative;
+                transform: translate(0, 0);
+                margin-top: 4rem;
+                right: 0;
+                top: 0;
+            }
         }
 
         & .data {
             margin-top: 3.5rem;
+
+            @include respond(mini-desktop) {
+                margin-top: 0rem;
+            }
         }
 
         & .number {
@@ -104,6 +132,11 @@
             line-height: 1.3rem;
             text-align: center;
             margin-block-end: 1rem;
+
+            @include respond(mini-desktop) {
+                font-size: 4rem;
+                line-height: 4.3rem;
+            }
 
             & span {
                 font-family: 'rubikBold', sans-serif;
@@ -114,8 +147,16 @@
             text-align: center;
             border-radius: 10px;
             font-size: 0.8rem;
-            padding-block: 0.5rem;
+            padding-block: 0.7rem;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include respond(mini-desktop) {
+                font-size: 3rem;
+                line-height: 3.3rem;
+            }
         }
     }
 }
@@ -129,6 +170,14 @@
         direction: rtl;
         margin-inline: 0.5rem;
         padding: 1rem;
+
+        @include respond(mini-desktop) {
+            padding: 2rem;
+            margin-inline: 2.5rem;
+            min-height: 45rem;
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &-track {

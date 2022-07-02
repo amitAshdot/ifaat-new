@@ -13,9 +13,11 @@
         // border: 1px solid red;
 
         @include respond(mini-desktop) {
+            width: 90vw;
             flex-direction: column;
             padding-inline-start: 5rem;
             padding-inline-end: 5rem;
+            margin-block-start: 18rem;
         }
     }
 
@@ -25,13 +27,24 @@
         font-family: 'rubikBold', sans-serif;
         line-height: initial;
         margin-block-end: 2rem;
+
+        @include respond(mini-desktop) {
+            font-size: 5rem;
+            margin-block-end: 5rem;
+        }
     }
 
     &-text {
+        font-family: 'rubikLight',
+            sans-serif;
         font-weight: 100;
         text-align: right;
         line-height: initial;
         margin-block-end: 2rem;
+
+        @include respond(mini-desktop) {
+            font-size: 4rem;
+        }
     }
 
     &-dont-miss {
@@ -39,5 +52,10 @@
         font-family: 'rubikBold', sans-serif;
         font-size: 2rem;
         line-height: initial;
+
+        @include respond(mini-desktop) {
+            font-size: 5rem;
+
+        }
     }
 }
