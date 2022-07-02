@@ -63,6 +63,7 @@
     padding-inline: 0.5rem;
 
     @include respond(mini-desktop) {
+        display: flex !important;
         width: 24rem;
         height: 24rem;
         right: 12rem;

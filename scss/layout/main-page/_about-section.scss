@@ -76,11 +76,13 @@
         padding-block-end: 2rem;
         padding-inline-start: 5rem;
         width: 72%;
+        border: 1px solid;
 
         @include respond(mini-desktop) {
             width: 100%;
             margin-top: -15rem;
             margin-bottom: 5rem;
+            border: none;
         }
 
         p {
