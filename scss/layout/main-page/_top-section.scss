@@ -71,11 +71,12 @@
                 right: -12%;
 
                 @include respond(mini-desktop) {
-                    width: 60rem;
+                    width: 69%;
                     height: auto;
                     position: absolute;
                     top: 22rem;
                     right: -16rem;
+                    z-index: -1;
                 }
             }
         }

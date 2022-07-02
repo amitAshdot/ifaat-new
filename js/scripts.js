@@ -177,8 +177,8 @@ document.addEventListener("DOMContentLoaded", function () {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2.5,
-                    slidesToScroll: 3,
+                    slidesToShow: 2.15,
+                    slidesToScroll: 2,
                     infinite: true,
                     dots: true
                 }
