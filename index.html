@@ -319,7 +319,7 @@
                     load="lazy">
                 <p class="mobile-cta-title">חייגו לנציג</p>
             </a>
-            <div class="mobile-cta-left bg-black">
+            <div class="mobile-cta-left bg-black" onclick="toggleCta()">
                 <a href="#" class=" text-white">להשארת פרטים לחצו כאן</a>
             </div>
         </div>
@@ -329,6 +329,7 @@
 
     <!-- FOOTER SECTION START-->
     <footer class="footer-section" aria-label="footer-section">
+        <div class="u-mobile close" onclick="toggleCta()">X</div>
         <div class="footer-circle circle">
             <p class="circle-percentage">100%</p>
             <p class="circle-text text-white">המכרזים בישראל ישירות למייל שלך</p>
@@ -404,13 +405,26 @@
     <script>
         function moveTo(event) { window.scrollTo(0, document.body.scrollHeight); }
     </script>
+    <script>
+        const toggleCta = () => {
+            const footer = $('.footer-section');
+            const circle = $('.circle');
 
+            if ($('.footer-section:visible').length === 0) {
+                footer.fadeIn(300);
+                footer.addClass("mobile");
+
+            } else {
+                footer.fadeOut(300);
+                footer.removeClass("mobile");
+
+            }
+        }
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let form = document.getElementById('form_main');
-
             $('#input_10_1').change(function () {
-
                 if ($(this).val() === 'yes') {
                     $('.divhidden').fadeIn(300);
                 } else {
