@@ -2,6 +2,7 @@
     position: relative;
     // border: 1px solid red;
     direction: ltr;
+    overflow: visible;
 
     &-section {
         position: relative;
@@ -18,7 +19,7 @@
             flex-direction: column;
             padding-inline-start: 5rem;
             padding-inline-end: 5rem;
-            margin-block-start: 15rem;
+            margin-block-start: 10rem;
         }
     }
 
@@ -36,7 +37,7 @@
             line-height: 4.5rem;
             font-size: 4.5rem;
             padding-inline-start: 0;
-            margin-block-end: 1rem;
+            margin-block-end: 3rem;
             width: 100%;
             text-align: center;
         }

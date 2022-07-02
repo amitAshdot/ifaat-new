@@ -62,10 +62,24 @@
     transform: translate(50%, 35%);
     padding-inline: 0.5rem;
 
+    @include respond(mini-desktop) {
+        width: 24rem;
+        height: 24rem;
+        right: 12rem;
+        top: 11rem;
+        padding-inline: 2rem;
+        text-align: center;
+    }
+
     &-percentage {
         font-family: 'rubik', sans-serif;
         font-size: 1.5rem;
         line-height: 1.5rem;
+
+        @include respond(mini-desktop) {
+            font-size: 4rem;
+            line-height: 4rem;
+        }
     }
 
     &-text {
@@ -73,6 +87,11 @@
         font-size: 1rem;
         line-height: 1rem;
         font-weight: 100;
+
+        @include respond(mini-desktop) {
+            font-size: 3rem;
+            line-height: 3rem;
+        }
     }
 }
 
