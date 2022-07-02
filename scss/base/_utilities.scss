@@ -6,7 +6,7 @@
 .u-desktop {
   display: block;
 
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     display: none;
 
   }
@@ -15,7 +15,7 @@
 .u-mobile {
   display: none !important;
 
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     display: block !important;
 
   }

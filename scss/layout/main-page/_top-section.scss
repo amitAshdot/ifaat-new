@@ -5,7 +5,7 @@
         margin: auto;
         padding-block-start: 12rem;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             // height: 10rem;
             flex-direction: column;
             align-items: center;
@@ -18,7 +18,7 @@
     }
 
     &-mobile {
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             width: 90%;
             text-align: center;
             margin-inline: 15%;
@@ -35,16 +35,17 @@
         width: 40%;
         text-align: end;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             position: absolute;
             width: 100%;
         }
 
         &-item {
+
             // margin-block-start: 4rem;
             overflow: visible;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 width: 30rem;
                 height: auto;
                 aspect-ratio: 4.774;
@@ -53,13 +54,16 @@
             }
 
             & img {
+                @include respond(big-desktop-min) {}
+
                 width: 142%;
                 height: auto;
                 position: absolute;
                 top: -9%;
                 right: -12%;
+                max-width: 631px;
 
-                @include respond(mini-desktop) {
+                @include respond(tab-port) {
                     width: 69%;
                     height: auto;
                     position: absolute;
@@ -82,7 +86,7 @@
 
         width: 60%;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             gap: 1rem;
             width: 48.5rem;
             margin-inline-start: 20rem;
@@ -94,7 +98,7 @@
                 width: auto;
                 margin-block-end: 13rem;
 
-                @include respond(mini-desktop) {
+                @include respond(tab-port) {
                     margin-block-end: 13rem;
                     width: 29.41rem;
                     height: auto;
@@ -106,7 +110,7 @@
             font-size: 1.5rem;
             line-height: initial;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 font-size: 4.5rem;
                 line-height: 4.5rem;
             }
@@ -117,7 +121,7 @@
             font-size: 8.5rem;
             line-height: 8.5rem;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 font-size: 11rem;
                 line-height: 10.5rem;
             }
@@ -132,7 +136,7 @@
                 right: 12%;
                 transform: translateY(-50%);
 
-                @include respond(mini-desktop) {
+                @include respond(tab-port) {
                     font-size: 4rem;
                     line-height: 4rem;
                 }
@@ -151,7 +155,7 @@
                 font-size: 8rem;
                 line-height: 6rem;
 
-                @include respond(mini-desktop) {
+                @include respond(tab-port) {
                     font-size: 10.5rem;
                     line-height: 9.5rem;
                 }
@@ -165,7 +169,7 @@
                 width: min-content;
                 padding-inline-start: 0.7rem;
 
-                @include respond(mini-desktop) {
+                @include respond(tab-port) {
                     font-size: 4rem;
                     line-height: 3.5rem;
                 }
@@ -175,7 +179,7 @@
         &-sale {
             width: auto;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 margin-block-end: 1.5rem;
             }
 
@@ -184,7 +188,7 @@
                 padding: 0 1rem;
                 line-height: initial;
 
-                @include respond(mini-desktop) {
+                @include respond(tab-port) {
                     padding: 1rem;
                     font-size: 6rem;
                 }
@@ -195,7 +199,7 @@
             font-size: 1.5rem;
             line-height: initial;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 font-family: 'rubikLight', sans-serif;
                 font-size: 4.5rem;
                 line-height: 4.5rem;

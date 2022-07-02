@@ -56,7 +56,7 @@
         width: 25%;
         margin-left: 3rem;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
           width: 15%;
           margin-left: 1rem;
         }
@@ -165,7 +165,7 @@
 
   @include respond(tab-land) {}
 
-  @include respond(mini-desktop) {}
+  @include respond(tab-port) {}
 
   @include respond(tab-port) {}
 
@@ -183,7 +183,7 @@
 
     @include respond(tab-land) {}
 
-    @include respond(mini-desktop) {}
+    @include respond(tab-port) {}
 
     @include respond(tab-port) {}
 
@@ -266,7 +266,7 @@
       width: 45vw;
     }
 
-    @include respond(mini-desktop) {}
+    @include respond(tab-port) {}
 
     @include respond(tab-port) {
       width: 50vw;

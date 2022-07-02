@@ -20,7 +20,6 @@ html {
   position: relative;
   scroll-behavior: smooth;
 
-  // font-size: 20px;
   // font-size: 0.1111vw;
   min-height: 0vw;
   // max-width: 1920px;
@@ -33,25 +32,23 @@ html {
 
   @include respond(big-desktop-max) {
     // font-size: 121.8%; // 1rem = 19.5px, 19.5 / 16 = 75%
-    // font-size: 1.045vw;
     font-size: 1vw;
-
-    // font-size: calc(0.558036vw + 9.28571px);
   }
 
-  // @include respond(big-desktop-min) {
-  //   font-size: 16px;
-  //   // font-size: 121.8%; // 1rem = 19.5px, 19.5 / 16 = 75%
-  // }
+  @include respond(big-desktop-min) {
+    font-size: 16px;
+    // font-size: 1vw;
+    // font-size: 121.8%; // 1rem = 19.5px, 19.5 / 16 = 75%
+  }
 
   //  @include respond(small-desktop) {
   //    font-size: 121.8%; // 1rem = 19.5px, 19.5 / 16 = 75%
   //  }
 
 
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     // font-size: 56.25%; // 1rem = 9px, 9 / 16 = 56.25%
-    font-size: calc(0.1111vw + 3.9px);
+    // font-size: calc(0.1111vw + 3.9px);
   }
 
   // @include respond(tab-land) {

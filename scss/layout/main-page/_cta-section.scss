@@ -13,7 +13,7 @@
         max-width: 1920px;
         margin: auto;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             padding-inline-start: 5rem;
             padding-inline-end: 5rem;
             padding-block-end: 5rem;
@@ -41,7 +41,7 @@
         line-height: 4.1rem;
         font-size: 4.1rem;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             line-height: 6.8rem;
             font-size: 6.8rem;
             width: 46.8%;
@@ -61,6 +61,34 @@
             width: 100%;
             // margin-block-end: 1rem;
         }
+
+        & .message {
+            opacity: 0;
+            width: 100%;
+            margin-block-start: 1rem;
+            margin-block-end: 1rem;
+            text-align: center;
+
+            transition: all 0.3s;
+
+            @include respond(mini-desktop) {
+                font-size: 3.9rem;
+                width: 100%;
+                margin-block-start: 2rem;
+                margin-block-end: 2rem;
+            }
+
+            &.error {
+                opacity: 1;
+                border: 2px solid $error-border;
+                background: $error-bg;
+                text-align: center;
+                border-radius: 20px;
+                padding: 2rem;
+                margin-top: 1rem;
+                line-height: initial;
+            }
+        }
     }
 
     &-input {
@@ -74,7 +102,7 @@
         border: 2px solid $color-black;
         background: white;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             font-size: 3.9rem;
             width: 100%;
             height: 3.2rem;
@@ -87,7 +115,7 @@
 
         &:first-child {
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 margin-block-start: 0rem;
             }
         }
@@ -95,7 +123,7 @@
         &:nth-child(n+4) {
             margin-block-start: 1rem;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 margin-block-start: 2rem;
             }
         }
@@ -130,7 +158,7 @@
         background-color: $color-primary;
 
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             font-size: 3.9rem;
             width: 100%;
             height: 3.2rem;
@@ -151,7 +179,7 @@
 
         transition: all 0.3s;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             font-size: 3.9rem;
             width: 100%;
             margin-block-start: 2rem;

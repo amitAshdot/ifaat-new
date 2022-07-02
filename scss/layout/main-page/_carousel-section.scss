@@ -3,8 +3,9 @@
     // border: 1px solid red;
     direction: ltr;
     overflow: visible;
+    padding-inline-start: 0rem;
 
-    @include respond(mini-desktop) {
+    @include respond(tab-port) {
         padding-inline-start: 8rem;
     }
 
@@ -19,7 +20,7 @@
         // padding-inline-end: 7rem;
         direction: ltr;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             flex-direction: column;
             padding-inline-start: 5rem;
             padding-inline-end: 5rem;
@@ -37,7 +38,7 @@
         // line-height: 4.2rem;
         // font-size: 4.1rem;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             line-height: 4.5rem;
             font-size: 4.5rem;
             padding-inline-start: 0;
@@ -61,7 +62,7 @@
         box-shadow: 0px 1px 6px rgba($color-black, 0.2);
         // border: 1px solid purple;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             display: flex !important;
         }
 
@@ -75,7 +76,7 @@
 
             // padding-inline: 1rem;
             // height: 15rem;
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 // min-height: 45rem;
                 display: flex;
                 justify-content: center;
@@ -97,7 +98,7 @@
             width: auto;
             height: 2.5rem;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 height: 7rem;
             }
 
@@ -116,7 +117,7 @@
             transform: translateX(50%);
             width: 100%;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 font-size: 4rem;
                 line-height: 4rem;
                 top: 11rem;
@@ -131,7 +132,7 @@
         & .data {
             margin-top: 3.5rem;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 margin-top: 0rem;
             }
         }
@@ -142,7 +143,7 @@
             text-align: center;
             margin-block-end: 1rem;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 font-size: 4rem;
                 line-height: 4.3rem;
             }
@@ -162,7 +163,7 @@
             align-items: center;
             justify-content: center;
 
-            @include respond(mini-desktop) {
+            @include respond(tab-port) {
                 font-size: 3rem;
                 line-height: inherit;
             }
@@ -177,10 +178,10 @@
     &-slide {
         position: relative;
         direction: rtl;
-        margin-inline: 0.5rem;
+        margin-inline: 1rem;
         padding: 1rem;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             padding: 2rem;
             margin-inline: 2.5rem;
             min-height: 45rem;
@@ -198,7 +199,12 @@
         direction: ltr;
 
         &.draggable {
-            padding-inline-start: 3rem;
+            padding-inline-start: 5.5rem;
+
+            @include respond(tab-port) {
+                padding-inline-start: 5rem;
+            }
+
         }
     }
 
@@ -218,7 +224,7 @@
         z-index: 5;
 
         // border: solid 1px red;
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             position: absolute;
             width: 7.5rem;
             top: 50%;

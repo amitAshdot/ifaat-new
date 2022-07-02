@@ -12,7 +12,7 @@
         background: rgba($color: $color-primary, $alpha: 0.19);
         // border: 1px solid red;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             width: 90vw;
             flex-direction: column;
             padding-inline-start: 5rem;
@@ -29,7 +29,7 @@
         line-height: initial;
         margin-block-end: 2rem;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             font-size: 5rem;
             margin-block-end: 5rem;
         }
@@ -43,7 +43,7 @@
         line-height: initial;
         margin-block-end: 2rem;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             font-size: 4rem;
         }
     }
@@ -54,7 +54,7 @@
         font-size: 2rem;
         line-height: initial;
 
-        @include respond(mini-desktop) {
+        @include respond(tab-port) {
             font-size: 5rem;
 
         }

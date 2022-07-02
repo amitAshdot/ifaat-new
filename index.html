@@ -341,7 +341,7 @@
                 עלות בתוקף עד ה-30.5 </p>
         </div>
         <h5 class="text-white form-main-title">לקבלת גישה לכל המכרזים השאירו פרטים</h5>
-        <form id="form_main" class="form form-main">
+        <form id="form" class="form form-main">
             <input type="hidden" id="uid" name="uid" value="FA470709-56A1-4A8F-BC1C-4643AD78481F">
             <input type="hidden" id="originatingleadcode" name="originatingleadcode" value="8">
             <input type="hidden" id="statuscode" name="statuscode" value="15">
@@ -349,25 +349,26 @@
             <input type="hidden" id="campaign" name="pcfsystemfield52" value="" class="campaign">
             <input type="hidden" id="pcfsystemfield46" value="" name="pcfsystemfield46">
             <div class="form-row">
-                <select name="input_10" id="input_10_1" required="">
+                <select name="customer" id="customer" >
                     <option value="" selected="selected" class="gf_placeholder">האם אתה לקוח קיים?</option>
                     <option value="yes">כן, מעוניין לקבל שירות</option>
                     <option value="no">לא, אני רוצה להצטרף</option>
                 </select>
             </div>
             <div class="form-row">
-                <input name="accountname" id="accountname" type="text" value="" class="medium" placeholder="שם מלא">
+                <input name="accountname" id="name" type="text" value="" class="medium" placeholder="שם מלא">
             </div>
             <div class="form-row">
-                <input name="telephone1" id="input_1_2" type="text" minlength="8" maxlength="10" value="" class="medium"
-                    placeholder="טלפון לחזרה" required="">
+                <input name="telephone1" id="phone" type="tel" value="" class="medium"
+                    placeholder="טלפון לחזרה">
             </div>
             <div class="form-row">
-                <input type="email" id="emailaddress1" name="emailaddress1" value="" placeholder="אימייל">
+                <input type="email" id="email" name="emailaddress1" value="" placeholder="אימייל">
             </div>
             <div class="form-row">
                 <input type="submit" id="submit" class="shake gform_button button" value="התחילו לקבל מכרזים">
             </div>
+            <div class="message" id="message"></div>
             <div class="divhidden">
                 <p>לקוחות קיימים</p>
                 <a href="#">למידע נוסף לחצ/י כאן</a>
@@ -424,7 +425,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let form = document.getElementById('form_main');
-            $('#input_10_1').change(function () {
+            $('#customer').change(function () {
                 if ($(this).val() === 'yes') {
                     $('.divhidden').fadeIn(300);
                 } else {
@@ -449,6 +450,50 @@
 
         });
     </script> -->
+    <script>
+
+    //   //get url params
+    //   $( document ).ready(function() {
+    //     const queryString = window.location.search
+    //       try{
+    //           const urlParams = new URLSearchParams(queryString)
+    //           const campaign = urlParams.get('campaign')
+    //           const keyword = urlParams.get('keyword')
+    //           const utmSource = urlParams.get('utm-source')
+    //           if(!utmSource){
+    //               let inputCampaign = document.getElementsByClassName('campaign')
+    //               let inputTerm = document.getElementsByClassName('term')
+    //               let campaignArray = [...inputCampaign]
+    //               let termArray = [...inputTerm]
+    //               campaignArray.map(item => (item.value = campaign))
+    //               termArray.map(item => (item.value = keyword))
+    //               //ONANDOFF FUNCTION START
+    //               timerPlus("5e2d900e4369e40017de9383");
+    //           }
+    //           else{
+    //               let phone = $("a[href='tel:072-3944129']")
+    //               let phoneArray = [...phone]
+    //                 phoneArray.map(item =>{
+    //                     item.href = "tel:0747691374"
+    //                     if(item.innerHTML !== " חייג לנציג "){
+    //                         item.innerHTML = "לנציג מכירות ללא המתנה חייגו :<br>074-7691374"
+    //                     }
+    //                 })
+                    
+    //                 let originatingleadcode = $("input[name=originatingleadcode]")
+    //                 originatingleadcode.each(function() {
+    //                     $(this).val('51');
+    //                 })
+    //               //ONANDOFF FUNCTION START
+    //               timerPlus("607c0b19080fb70017a6d963");
+    //           }
+    //       }
+    //       catch(err) {
+              
+    //       }
+    //   })
+      
+    </script>
 </body>
 
 </html>

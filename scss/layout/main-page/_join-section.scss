@@ -10,7 +10,7 @@
                padding-inline-end: 7rem;
                background-color: $color-primary;
 
-               @include respond(mini-desktop) {
+               @include respond(tab-port) {
                    padding-block-start: 10rem;
                    padding-block-end: 10rem;
                    padding-inline-start: 5rem;
@@ -57,7 +57,7 @@
                font-size: 3.2rem;
                width: fit-content;
 
-               @include respond(mini-desktop) {
+               @include respond(tab-port) {
                    line-height: 6.8rem;
                    font-size: 6.8rem;
                    margin-block-end: 3rem;
@@ -71,7 +71,7 @@
                line-height: 2.5rem;
                width: fit-content;
 
-               @include respond(mini-desktop) {
+               @include respond(tab-port) {
                    margin-block-end: 3rem;
                    font-size: 3.5rem;
                    line-height: 3.5rem;
@@ -109,7 +109,7 @@
                width: 16rem;
                height: 3rem;
 
-               @include respond(mini-desktop) {
+               @include respond(tab-port) {
                    width: 33rem;
                    height: 7rem;
                    font-size: 3rem;

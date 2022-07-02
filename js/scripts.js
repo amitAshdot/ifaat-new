@@ -98,68 +98,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // }
     // // -----END URL PARAMS-----
-    // // -----START EMAIL VALIDATION-----
-    // const isNumberKey = (evt) => {
-    //     let charCode = (evt.which) ? evt.which : evt.keyCode
-    //     if (charCode > 31 && (charCode < 48 || charCode > 57))
-    //         return false;
-    //     return true;
-    // }
-    // let phoneNumberInput = document.getElementById("phone");
-    // phoneNumberInput.onkeypress = isNumberKey
+    // -----START EMAIL VALIDATION-----
+    const isNumberKey = (evt) => {
+        let charCode = (evt.which) ? evt.which : evt.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
+    let phoneNumberInput = document.getElementById("phone");
+    phoneNumberInput.onkeypress = isNumberKey
 
-    // const validateEmail = (email) => {
-    //     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    //     return re.test(String(email).toLowerCase());
-    // }
+    const validateEmail = (email) => {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
 
-    // const validatePhone = (phone) => {
-    //     // const re = /^[0-9]{10}$/;
-    //     const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+    const validatePhone = (phone) => {
+        // const re = /^[0-9]{10}$/;
+        const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
 
-    //     return re.test(String(phone));
-    // }
+        return re.test(String(phone));
+    }
 
-    // const validateForm = () => {
-    //     let flag = false, name = document.getElementById("name"), email = document.getElementById("email"),
-    //         phone = document.getElementById("phone"), buss = document.getElementById("buss"),
-    //         area = document.getElementById("area"), message = document.getElementById("message");
-    //     if (name.value.length < 2) {
-    //         name.classList.add("error");
-    //         flag = true;
-    //     }
-    //     if (validateEmail(email.value) === false) {
-    //         email.classList.add("error");
-    //         flag = true;
-    //     }
-    //     if (validatePhone(phone.value) === false) {
-    //         phone.classList.add("error");
-    //         flag = true;
-    //     }
-    //     if (buss.value === "") {
-    //         buss.classList.add("error");
-    //         flag = true;
-    //     }
-    //     if (area.value === "") {
-    //         area.classList.add("error");
-    //         flag = true;
-    //     }
-    //     if (flag) {
-    //         message.innerHTML = "אנא מלא/י את כל השדות הנדרשים";
-    //         message.classList.add("error");
-    //     }
-    //     return flag ? false : true;
-    // }
-    // const submitForm = (e) => {
-    //     if (validateForm()) {
-    //         return true
-    //     } else {
-    //         e.preventDefault();
-    //         return false
-    //     }
-    // }
-    // document.getElementById("form").addEventListener("submit", submitForm);
-    // // -----END EMAIL VALIDATION-----
+    const validateForm = () => {
+        let flag = false, name = document.getElementById("name"), email = document.getElementById("email"),
+            phone = document.getElementById("phone"), customer = document.getElementById("customer");
+        message = document.getElementById("message");
+
+        if (name.value.length < 2) {
+            name.classList.add("error");
+            flag = true;
+        }
+        if (validateEmail(email.value) === false) {
+            email.classList.add("error");
+            flag = true;
+        }
+        if (validatePhone(phone.value) === false) {
+            phone.classList.add("error");
+            flag = true;
+        }
+        if (customer.value === "") {
+            customer.classList.add("error");
+            flag = true;
+        }
+        if (flag) {
+            message.innerHTML = "אנא מלא/י את כל השדות הנדרשים";
+            message.classList.add("error");
+        }
+        return flag ? false : true;
+    }
+    const submitForm = (e) => {
+        if (validateForm()) {
+            return true
+        } else {
+            e.preventDefault();
+            return false
+        }
+    }
+    document.getElementById("form").addEventListener("submit", submitForm);
+    // -----END EMAIL VALIDATION-----
 
 
 
@@ -175,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // rtl: true,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 900,
                 settings: {
                     slidesToShow: 2.15,
                     slidesToScroll: 2,

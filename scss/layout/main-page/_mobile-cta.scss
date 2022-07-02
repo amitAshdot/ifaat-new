@@ -1,7 +1,7 @@
 .mobile-cta {
     display: none;
 
-    @include respond(mini-desktop) {
+    @include respond(tab-port) {
         width: 100%;
         position: fixed;
         bottom: 0;

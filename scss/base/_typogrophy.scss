@@ -36,7 +36,7 @@ body {
 img {
   font-size: 1rem;
 
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     font-size: 3rem;
   }
 }
@@ -63,7 +63,7 @@ h3 {
   line-height: 3rem;
   letter-spacing: 0.03rem;
 
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     font-size: 4.1rem;
     line-height: initial;
     letter-spacing: 0.03rem;
@@ -78,7 +78,7 @@ p {
   font-size: 0.9rem;
   line-height: 1rem;
 
-  @include respond(mini-desktop) {
+  @include respond(tab-port) {
     font-size: 3rem;
   }
 
