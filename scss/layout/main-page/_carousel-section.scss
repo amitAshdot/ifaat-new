@@ -23,7 +23,7 @@
         @include respond(tab-port) {
             flex-direction: column;
             padding-inline-start: 5rem;
-            padding-inline-end: 5rem;
+            padding-inline-end: 0rem;
             margin-block-start: 7rem;
         }
     }
@@ -42,7 +42,7 @@
             line-height: 4.5rem;
             font-size: 4.5rem;
             padding-inline-start: 0;
-            margin-block-end: 3rem;
+            margin-block-end: 5rem;
             width: 100%;
             text-align: center;
         }

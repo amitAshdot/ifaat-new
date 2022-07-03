@@ -113,8 +113,8 @@
 
         @include respond(tab-port) {
             gap: 1rem;
-            width: 48.5rem;
-            margin-inline-start: 20rem;
+            width: 60rem;
+            margin-inline-start: 33rem;
         }
 
         &-logo {
@@ -136,8 +136,8 @@
             line-height: initial;
 
             @include respond(tab-port) {
-                font-size: 4.5rem;
-                line-height: 4.5rem;
+                font-size: 5.5rem;
+                line-height: 5.5rem;
             }
         }
 
@@ -147,8 +147,8 @@
             line-height: 8.25rem;
 
             @include respond(tab-port) {
-                font-size: 11rem;
-                line-height: 10.5rem;
+                font-size: 15rem;
+                line-height: 15.5rem;
             }
 
             &-above {
@@ -162,8 +162,9 @@
                 transform: translateY(-50%);
 
                 @include respond(tab-port) {
-                    font-size: 4rem;
-                    line-height: 4rem;
+                    font-family: 'rubikLight', sans-serif;
+                    font-size: 5rem;
+                    line-height: 5rem;
                 }
             }
         }
@@ -181,8 +182,8 @@
                 line-height: 6rem;
 
                 @include respond(tab-port) {
-                    font-size: 10.5rem;
-                    line-height: 9.5rem;
+                    font-size: 13.5rem;
+                    line-height: 13.5rem;
                 }
             }
 
@@ -195,8 +196,9 @@
                 padding-inline-start: 0.7rem;
 
                 @include respond(tab-port) {
+                    font-family: 'rubikLight', sans-serif;
                     font-size: 4rem;
-                    line-height: 3.5rem;
+                    line-height: 4rem;
                 }
             }
         }
@@ -226,8 +228,8 @@
 
             @include respond(tab-port) {
                 font-family: 'rubikLight', sans-serif;
-                font-size: 4.5rem;
-                line-height: 4.5rem;
+                font-size: 5rem;
+                line-height: 5rem;
             }
         }
 
