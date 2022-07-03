@@ -18,13 +18,20 @@
         max-width: 50rem;
         text-decoration: none;
         color: $color-white;
+        gap: 2rem;
+
+        &-icon {
+            filter: invert(1);
+            transform: rotate(90deg);
+        }
 
         & p {
             font-family: 'rubikLight', sans-serif;
-            font-size: 3rem;
-            line-height: 3rem;
+            font-size: 5rem;
+            line-height: 5rem;
             display: flex;
             flex-direction: column;
+
         }
 
     }
