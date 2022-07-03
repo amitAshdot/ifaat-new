@@ -42,6 +42,7 @@
         text-align: right;
         line-height: initial;
         margin-block-end: 2rem;
+        font-size: 1.1rem;
 
         @include respond(tab-port) {
             font-size: 4rem;
