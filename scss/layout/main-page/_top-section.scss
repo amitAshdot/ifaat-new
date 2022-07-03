@@ -138,6 +138,7 @@
                 margin-block-end: 13rem;
 
                 @include respond(tab-port) {
+                    margin-block-start: 2rem;
                     margin-block-end: 13rem;
                     width: 29.41rem;
                     height: auto;
