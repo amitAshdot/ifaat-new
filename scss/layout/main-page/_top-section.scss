@@ -2,6 +2,7 @@
     position: relative;
     background: url(../images/bg-desktop.webp) no-repeat center center;
     background-size: cover;
+    z-index: -1;
 
     @include respond(tab-port) {
         background: url(../images/bg-mobile.webp) no-repeat center center;
@@ -36,6 +37,8 @@
     }
 
     &-mobile {
+        z-index: 1;
+
         @include respond(tab-port) {
             width: 90%;
             text-align: center;
@@ -52,6 +55,7 @@
         overflow: visible;
         width: 40%;
         text-align: end;
+        z-index: -1;
 
         @include respond(tab-port) {
             position: absolute;
@@ -101,7 +105,7 @@
         align-items: flex-start;
         // gap: 1rem;
         // padding-inline-end: 7rem;
-
+        z-index: 1;
         width: 60%;
 
         @include respond(tab-port) {
