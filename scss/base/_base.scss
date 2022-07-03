@@ -84,9 +84,9 @@ body {
 
 .main-section {
   width: 73%;
-  // pointer-events: none;
 
   @include respond(tab-port) {
+
     width: 100%;
   }
 }
