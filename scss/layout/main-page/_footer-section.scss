@@ -156,6 +156,7 @@
     }
 
     & .message {
+        position: absolute;
         opacity: 0;
         width: 100%;
         margin-block-start: 1rem;
@@ -200,6 +201,10 @@
     }
 
     &-row {
+
+        width: 85%;
+        margin: auto;
+
         input {
             width: 100%;
             border: none;

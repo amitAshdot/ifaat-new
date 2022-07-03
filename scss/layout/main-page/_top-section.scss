@@ -1,3 +1,21 @@
+.bg {
+    position: relative;
+    background: url(../images/bg-desktop.webp) no-repeat center center;
+    background-size: cover;
+
+    @include respond(tab-port) {
+        background: url(../images/bg-mobile.webp) no-repeat center center;
+    }
+
+    &-float {
+        position: absolute;
+        width: 23.4rem;
+        height: auto;
+        right: -9rem;
+        top: -1rem;
+    }
+}
+
 .top {
     &-section {
         display: flex;

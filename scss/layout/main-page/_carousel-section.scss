@@ -181,6 +181,7 @@
         direction: rtl;
         margin-inline: 1rem;
         padding: 0.5rem;
+        background: $color-white;
 
         @include respond(tab-port) {
             padding: 2rem;
