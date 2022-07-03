@@ -2,13 +2,13 @@
     position: absolute;
     width: inherit;
     height: 100vh;
-    background: url(../images/bg-desktop.webp) no-repeat center center;
+    background: url(../images/bg-desktop.webp) no-repeat center center fixed;
     background-size: cover;
     z-index: -1;
     pointer-events: none;
 
     @include respond(tab-port) {
-        background: url(../images/bg-mobile.webp) no-repeat center center;
+        background: url(../images/bg-mobile.webp) no-repeat center center fixed;
     }
 
     &-float {
