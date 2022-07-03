@@ -168,8 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesToShow: 5.5,
         slidesToScroll: 3,
         nextArrow: $('.slick-next'),
-        // centerPadding: '760px',
-        // rtl: true,
         responsive: [
             {
                 breakpoint: 900,
@@ -180,15 +178,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     dots: true
                 }
             },
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
     // -----END CAROUSEL-----
 
 
     // -----START toggleCta CTA-----
+    const toggleCta = () => {
+        const footer = $('.footer-section');
+        const circle = $('.circle');
+
+        if ($('.footer-section:visible').length === 0) {
+            footer.fadeIn(300);
+            footer.addClass("mobile");
+
+        } else {
+            footer.fadeOut(300);
+            footer.removeClass("mobile");
+
+        }
+    }
+    document.getElementById("close").addEventListener("click", toggleCta);
+    document.getElementById("ctaButton").addEventListener("click", toggleCta);
 
     // -----END toggleCta CTA-----
 });
