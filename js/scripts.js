@@ -186,16 +186,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // -----START toggleCta CTA-----
     const toggleCta = () => {
         const footer = $('.footer-section');
-        const circle = $('.circle');
-
         if ($('.footer-section:visible').length === 0) {
             footer.fadeIn(300);
             footer.addClass("mobile");
-
         } else {
             footer.fadeOut(300);
             footer.removeClass("mobile");
-
         }
     }
     document.getElementById("close").addEventListener("click", toggleCta);

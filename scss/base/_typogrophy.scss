@@ -70,10 +70,6 @@ h3 {
   }
 }
 
-p strong {
-  font-family: "rubik", sans-serif;
-}
-
 p {
   font-size: 0.9rem;
   line-height: 1rem;
@@ -82,11 +78,11 @@ p {
     font-size: 3rem;
   }
 
-  a {
-    color: $color-grey-dark;
-    text-decoration-color: $color-black;
-    text-decoration-thickness: 3px;
-  }
+  // a {
+  //   color: $color-grey-dark;
+  //   text-decoration-color: $color-black;
+  //   text-decoration-thickness: 3px;
+  // }
 }
 
 a {
