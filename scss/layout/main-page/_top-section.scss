@@ -140,6 +140,7 @@
                 @include respond(tab-port) {
                     margin-block-start: 2rem;
                     margin-block-end: 13rem;
+                    margin-inline-start: -1rem;
                     width: 29.41rem;
                     height: auto;
                 }
