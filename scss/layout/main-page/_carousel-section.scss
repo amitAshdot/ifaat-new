@@ -160,6 +160,7 @@
             padding-block: 0.7rem;
             cursor: pointer;
             display: flex;
+            gap: 0.2rem;
             align-items: center;
             justify-content: center;
 
@@ -179,7 +180,7 @@
         position: relative;
         direction: rtl;
         margin-inline: 1rem;
-        padding: 1rem;
+        padding: 0.5rem;
 
         @include respond(tab-port) {
             padding: 2rem;
@@ -187,7 +188,7 @@
             min-height: 45rem;
             display: flex;
             justify-content: center;
-            padding-inline-start: 5rem;
+            // padding-inline-start: 5rem;
         }
     }
 
