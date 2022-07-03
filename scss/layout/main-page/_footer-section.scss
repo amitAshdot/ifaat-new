@@ -323,7 +323,7 @@
 
     }
 
-    & .text-white {
+    & .contactid {
         font-family: 'rubikBold', sans-serif;
         display: flex;
         flex-direction: column;
@@ -340,6 +340,10 @@
                 line-height: initial;
             }
 
+        }
+
+        & p:first-child {
+            margin-block-end: 1rem;
         }
 
         a:link {
