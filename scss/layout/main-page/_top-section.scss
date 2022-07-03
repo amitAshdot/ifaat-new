@@ -22,6 +22,7 @@
     @include respond(tab-port) {
         background: url(../images/bg-mobile.webp) no-repeat center center fixed;
         background-position: top;
+        height: 400vw;
     }
 
     &-float {
