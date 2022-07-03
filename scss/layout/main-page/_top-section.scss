@@ -1,8 +1,11 @@
 .bg {
-    position: relative;
+    position: absolute;
+    width: inherit;
+    height: 100vh;
     background: url(../images/bg-desktop.webp) no-repeat center center;
     background-size: cover;
     z-index: -1;
+    pointer-events: none;
 
     @include respond(tab-port) {
         background: url(../images/bg-mobile.webp) no-repeat center center;
@@ -22,7 +25,7 @@
         display: flex;
         width: 60vw;
         margin: auto;
-        padding-block-start: 12rem;
+        padding-block-start: 10rem;
 
         @include respond(tab-port) {
             // height: 10rem;
@@ -129,7 +132,7 @@
         }
 
         & p.text-green {
-            font-size: 1.5rem;
+            font-size: 1.62rem;
             line-height: initial;
 
             @include respond(tab-port) {
@@ -140,8 +143,8 @@
 
         &-title {
             position: relative;
-            font-size: 8.5rem;
-            line-height: 8.5rem;
+            font-size: 8.25rem;
+            line-height: 8.25rem;
 
             @include respond(tab-port) {
                 font-size: 11rem;
@@ -184,7 +187,7 @@
             }
 
             & h2 {
-                font-size: 1.8rem;
+                font-size: 2rem;
                 line-height: 2.83rem;
                 font-weight: 100;
                 text-align: right;
@@ -206,7 +209,7 @@
             }
 
             & p {
-                font-size: 2.9rem;
+                font-size: 2.7rem;
                 padding: 0 1rem;
                 line-height: initial;
 
@@ -218,7 +221,7 @@
         }
 
         &-subscribe {
-            font-size: 1.5rem;
+            font-size: 1.44rem;
             line-height: initial;
 
             @include respond(tab-port) {
