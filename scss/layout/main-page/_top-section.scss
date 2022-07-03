@@ -89,11 +89,11 @@
                 max-width: 631px;
 
                 @include respond(tab-port) {
-                    width: 69%;
+                    width: 77%;
                     height: auto;
                     position: absolute;
                     top: 27rem;
-                    right: -18rem;
+                    right: -25rem;
                     z-index: -1;
                 }
             }
