@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     // When the user scrolls the page, execute myFunction
-    window.onscroll = function () { setFixed() };
-    let header = document.getElementById("header");
-    let viewPortWidth = window.innerWidth
-    let sticky = viewPortWidth * 0.011111 * 5;//5% of the viewport width
-    const setFixed = () => {
-        if (window.pageYOffset > sticky)
-            header.classList.add("sticky");
-        else
-            header.classList.remove("sticky");
-    }
+    // window.onscroll = function () { setFixed() };
+    // let header = document.getElementById("header");
+    // let viewPortWidth = window.innerWidth
+    // let sticky = viewPortWidth * 0.011111 * 5;//5% of the viewport width
+    // const setFixed = () => {
+    //     if (window.pageYOffset > sticky)
+    //         header.classList.add("sticky");
+    //     else
+    //         header.classList.remove("sticky");
+    // }
 
     // -----START ISONSCREEN-----
     // Helper function from: http://stackoverflow.com/a/7557433/274826
