@@ -254,6 +254,16 @@
                 margin-bottom: 6rem;
             }
 
+            & option {
+                color: black;
+                background-color: $color-primary;
+
+                &:not(:checked) {
+                    color: white;
+                    background-color: #000;
+                }
+            }
+
             &:focus+label {
                 color: white;
             }
