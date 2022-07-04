@@ -100,6 +100,7 @@
 
             @include respond(tab-port) {
                 height: 7rem;
+                height: 9rem;
             }
 
         }
@@ -109,12 +110,12 @@
             font-size: 1rem;
             line-height: 1.2rem;
             text-align: center;
-            margin-block-end: 2rem;
-            position: absolute;
+            // margin-block-end: 2rem;
+            // position: absolute;
             margin-block-start: 0rem;
-            top: 3.5rem;
-            right: 50%;
-            transform: translateX(50%);
+            // top: 3.5rem;
+            // right: 50%;
+            // transform: translateX(50%);
             width: 100%;
 
             @include respond(tab-port) {
@@ -180,8 +181,10 @@
         position: relative;
         direction: rtl;
         margin-inline: 1rem;
-        padding: 0.5rem;
-        background: $color-white;
+        padding: 0.8rem 0.5rem;
+        background: #fff;
+        min-height: 13rem;
+        justify-content: space-between;
 
         @include respond(tab-port) {
             padding: 2rem;
@@ -189,6 +192,7 @@
             min-height: 45rem;
             display: flex;
             justify-content: center;
+            justify-content: space-between;
             // padding-inline-start: 5rem;
         }
     }
