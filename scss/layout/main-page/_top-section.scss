@@ -8,12 +8,21 @@
     z-index: -1;
     pointer-events: none;
 
+
+    // min-height: 100vh;
+    // min-width: 1024px;
+
+    /* Set up proportionate scaling */
+    // width: 73%;
+    // height: auto;
+
+    // top: 0;
+    // right: 0;
+
     @include respond(tab-port) {
-        background: url(../images/bg-mobile.webp) no-repeat fixed;
+        background: url(../images/bg-mobile.webp) no-repeat center center fixed;
         background-position: top;
         height: 400vw;
-        width: 100vw;
-        position: fixed;
     }
 
     &-float {
