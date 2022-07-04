@@ -1,58 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // When the user scrolls the page, execute myFunction
-    // window.onscroll = function () { setFixed() };
-    // let header = document.getElementById("header");
-    // let viewPortWidth = window.innerWidth
-    // let sticky = viewPortWidth * 0.011111 * 5;//5% of the viewport width
-    // const setFixed = () => {
-    //     if (window.pageYOffset > sticky)
-    //         header.classList.add("sticky");
-    //     else
-    //         header.classList.remove("sticky");
-    // }
-
     // -----START ISONSCREEN-----
-    // Helper function from: http://stackoverflow.com/a/7557433/274826
-    const isElementInViewport = el => {
-        const pixFromElementTop = 1;
-        // special bonus for those using jQuery
-        if (typeof jQuery === "function" && el instanceof jQuery) {
-            el = el[0];
-        }
-        let rect = el.getBoundingClientRect();
-        return (
-            (rect.top + pixFromElementTop <= 0 && rect.bottom >= 0) ||
-            (rect.bottom + pixFromElementTop >=
-                (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.top + pixFromElementTop <=
-                (window.innerHeight || document.documentElement.clientHeight)) ||
-            (rect.top + pixFromElementTop >= 0 &&
-                rect.bottom + pixFromElementTop <=
-                (window.innerHeight || document.documentElement.clientHeight))
-        );
-    };
-    // Detect request animation frame
-    let scroll =
-        window.requestAnimationFrame ||
-        // IE Fallback
-        function (callback) {
-            window.setTimeout(callback, 1000 / 60);
-        };
-    let elementsToShow = document.querySelectorAll(".show-on-scroll");
+    // // Helper function from: http://stackoverflow.com/a/7557433/274826
+    // const isElementInViewport = el => {
+    //     const pixFromElementTop = 1;
+    //     // special bonus for those using jQuery
+    //     if (typeof jQuery === "function" && el instanceof jQuery) {
+    //         el = el[0];
+    //     }
+    //     let rect = el.getBoundingClientRect();
+    //     return (
+    //         (rect.top + pixFromElementTop <= 0 && rect.bottom >= 0) ||
+    //         (rect.bottom + pixFromElementTop >=
+    //             (window.innerHeight || document.documentElement.clientHeight) &&
+    //             rect.top + pixFromElementTop <=
+    //             (window.innerHeight || document.documentElement.clientHeight)) ||
+    //         (rect.top + pixFromElementTop >= 0 &&
+    //             rect.bottom + pixFromElementTop <=
+    //             (window.innerHeight || document.documentElement.clientHeight))
+    //     );
+    // };
+    // // Detect request animation frame
+    // let scroll =
+    //     window.requestAnimationFrame ||
+    //     // IE Fallback
+    //     function (callback) {
+    //         window.setTimeout(callback, 1000 / 60);
+    //     };
+    // let elementsToShow = document.querySelectorAll(".show-on-scroll");
 
-    const loop = () => {
-        Array.prototype.forEach.call(elementsToShow, function (element) {
-            if (isElementInViewport(element)) {
-                element.classList.add("is-visible");
-            } else {
-                element.classList.remove("is-visible");
-            }
-        });
-        scroll(loop);
-    };
+    // const loop = () => {
+    //     Array.prototype.forEach.call(elementsToShow, function (element) {
+    //         if (isElementInViewport(element)) {
+    //             element.classList.add("is-visible");
+    //         } else {
+    //             element.classList.remove("is-visible");
+    //         }
+    //     });
+    //     scroll(loop);
+    // };
 
-    // Call the loop for the first time
-    loop();
+    // // Call the loop for the first time
+    // loop();
 
     // -----END ISONSCREEN-----
 

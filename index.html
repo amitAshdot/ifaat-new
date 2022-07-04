@@ -432,22 +432,24 @@
              timerPlus("5e2d900e4369e40017de9383");
         });
     </script>
-    <!-- <script>
-        $('#form').submit(function (e) {
-            e.preventDefault();
-            var data = $(this).serialize();
-            $.ajax({
-                type: "POST",
-                url: './mail.php',
-                data: data,
-                success: function (mail) {
-                    alert('הפרטים נשלחו בהצלחה');
-                    // window.location.href = 'thankyou.html';
-                }
-            });
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            $('#form').submit(function (e) {
+                e.preventDefault();
+                var data = $(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: './mail.php',
+                    data: data,
+                    success: function (mail) {
+                        alert('הפרטים נשלחו בהצלחה');
+                        // window.location.href = 'thankyou.html';
+                    }
+                });
 
+            });
         });
-    </script> -->
+    </script>
     <!-- <script>
         var _ouibounce = ouibounce(document.getElementById('ouibounce-modal'), {
             aggressive: true, //Making this true makes ouibounce not to obey "once per visitor" rule
