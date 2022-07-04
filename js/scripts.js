@@ -198,4 +198,23 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("ctaButton").addEventListener("click", toggleCta);
 
     // -----END toggleCta CTA-----
+
+    // -----START ONCLICK CAROUSEL-----
+
+    const onClickCarousel = (e) => {
+        let screenWidth = window.innerWidth;
+        if (screenWidth < 900) {
+            toggleCta()
+        } else {
+
+            $("#name").focus();
+        }
+    }
+
+
+    $('.cta').click(onClickCarousel);
+
+
+    // -----END ONCLICK CAROUSEL-----
+
 });
