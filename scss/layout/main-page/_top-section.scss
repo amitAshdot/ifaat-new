@@ -72,7 +72,7 @@
         overflow: visible;
         width: 40%;
         text-align: end;
-        z-index: -1;
+        z-index: 0;
 
         @include respond(tab-port) {
             position: absolute;
