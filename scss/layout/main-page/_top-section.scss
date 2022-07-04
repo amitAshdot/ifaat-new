@@ -65,7 +65,7 @@
 
     &-right {
         position: relative;
-        display: flex;
+        display: flex !important;
         align-content: center;
         justify-content: center;
         align-items: center;
