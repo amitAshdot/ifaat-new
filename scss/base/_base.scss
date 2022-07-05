@@ -19,7 +19,7 @@
 html {
   position: relative;
   scroll-behavior: smooth;
-
+  font-size: 1vw;
   // font-size: 0.1111vw;
   min-height: 0vw;
   // max-width: 1920px;
@@ -36,7 +36,7 @@ html {
   }
 
   @include respond(big-desktop-min) {
-    font-size: 16px;
+    // font-size: 16px;
     // font-size: 1vw;
     // font-size: 121.8%; // 1rem = 19.5px, 19.5 / 16 = 75%
   }
@@ -73,7 +73,7 @@ body {
   /* set the box size in all elements to border-box thanks to *{} */
   position: relative;
   box-sizing: border-box;
-  max-width: 1920px;
+  // max-width: 1920px;
   margin-inline: auto;
   display: flex;
 

@@ -157,6 +157,15 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesToScroll: 3,
         nextArrow: $('.slick-next'),
         responsive: [
+            // {
+            //     breakpoint: 1920,
+            //     settings: {
+            //         slidesToShow: 5.5,
+            //         slidesToScroll: 3,
+            //         infinite: true,
+            //         dots: true
+            //     }
+            // },
             {
                 breakpoint: 900,
                 settings: {

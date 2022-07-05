@@ -28,7 +28,7 @@
 
     &-right {
         @include respond(big-desktop-min) {
-            transform: translate(0%, -10%)
+            transform: translate(20%, -10%);
         }
 
         position: relative;
@@ -59,7 +59,7 @@
 
         & .centered {
             @include respond(big-desktop-min) {
-                transform: translate(-63%, -60%)
+                transform: translate(-75%, -60%);
             }
 
             position: absolute;
@@ -137,7 +137,7 @@
 
     &-subtitle {
         @include respond(big-desktop-min) {
-            margin-inline: 2rem;
+            // margin-inline: 2rem;
         }
 
         color: $color-white;

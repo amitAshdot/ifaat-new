@@ -1,35 +1,21 @@
+
 <?
+$recepient = "micha@targetcall.co.il,shimon@targetcall.co.il";
+// $recepient = "amitashdot@gmail.com";
 
-$recepient = "amitashdot@gmail.com,"; 
-// $recepient = "eyalivne@gmail.com,micha@targetcall.co.il,"; 
-// $recepient = "amitashdot@gmail.com"; 
+$sitename = "ליד חדש - יפעת מכרזים";
 
-$text_1 = trim($_POST["name"]);
-$text_2 = trim($_POST["phone"]);
-$text_3 = trim($_POST["email"]);
-$text_4 = trim($_POST["buss"]);
-$text_5 = trim($_POST["area"]);
+$accountname = trim($_POST["accountname"]);
+$telephone1 = trim($_POST["telephone1"]);
+$email = trim($_POST["emailaddress1"]);
 
-$text_3 = trim($_POST["utm_campaign"]);
-$text_4 = trim($_POST["keywordBottom"]);
 
-$message = " \n ליד חדש מקמפיין סלולר - מקאן \n
-שם: $text_1 \n
-טלפון: $text_2\n
-אימייל: $text_3 \n
-תחום: $text_3 \n
-איזור: $text_3 \n
+$message = "ליד חדש - יפעת מכרזים <br>שם מלא: $accountname <br> טלפון: $telephone1 <br> 
+email:$email <br> ";
+$pagetitle = "ליד חדש - יפעת מכרזים";
+$headers = "יפעת מכרזים";
+$headers = "Content-Type: text/html; charset=UTF-8";
 
-קמפיין: $text_3 \n
-מילת מפתח : $text_4\n
-";
+mail($recepient, $pagetitle, $message, $headers);
 
-$pagetitle = "פניה חדשה - converteam";
-$headers = "From: https://converteam.co.il/ \r\nContent-type: text/plain; charset=utf8 \r\n";
-$from = "https://converteam.co.il/";
- if ( mail($recepient, $pagetitle, $message, $headers,$from)) {
-      echo("Email successfully sent to $to_email... $recepient");
-    } else {
-      echo("Email sending failed...");
-    }
 ?>

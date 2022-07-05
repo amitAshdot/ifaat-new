@@ -8,10 +8,10 @@
     <meta name="description"
         content="יפעת מכרזים - מאגר המכרזים הגדול במדינה. אלפי מכרזים בכל התחומים הכי חמים: מכרזי ניקיון, הסעדה, אחזקת מבנים ועוד מגוון רחב של מכרזים מחכים לך">
     <meta name="keywords" content="יפעת מכרזים, מכרזים, יפעת">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&amp;display=swap" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&amp;display=swap" rel="stylesheet">-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=9">
-    <meta property="og:image" content="path/to/image.jpg">
+    <meta property="og:image" content="./images/logo-black.webp">
     <link rel="shortcut icon" href="https://ifat-businesses.co.il/ifathomepage/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
     <meta name="theme-color" content="#3fca61" />
@@ -25,14 +25,77 @@
     <!-- <link defer rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
     <link defer rel="stylesheet" type="text/css" href="./js/slick/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180825420-1"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-180825420-1');
+
+    </script>
+
+    <!-- End Google Tag Manager -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-874993275');
+
+    </script>
+
+
+    <!--<script id="ptoken" src="https://ws.callindex.co.il/campaign/send_analytics.js?ptoken=850"></script>-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type='text/javascript' src='https://onandoff.co.il/onAndOff.js'> </script>
+    <!-- Facebook Pixel Code -->
+
+    <script>
+        // !function (f, b, e, v, n, t, s) {
+        //     if (f.fbq) return; n = f.fbq = function () {
+        //         n.callMethod ?
+        //             n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        //     };
+        //     if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        //     n.queue = []; t = b.createElement(e); t.async = !0;
+        //     t.src = v; s = b.getElementsByTagName(e)[0];
+        //     s.parentNode.insertBefore(t, s)
+        // }(window, document, 'script',
+        //     'https://connect.facebook.net/en_US/fbevents.js');
+        // fbq('init', '1204286489736615');
+        // fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+    <!-- Taboola Pixel Code -->
+    <script type='text/javascript'>
+        // window._tfa = window._tfa || [];
+        // window._tfa.push({ notify: 'event', name: 'page_view', id: 1460142 });
+        // !function (t, f, a, x) {
+        //     if (!document.getElementById(x)) {
+        //         t.async = 1; t.src = a; t.id = x; f.parentNode.insertBefore(t, f);
+        //     }
+        // }(document.createElement('script'),
+        //     document.getElementsByTagName('script')[0],
+        //     '//cdn.taboola.com/libtrc/unip/1460142/tfa.js',
+        //     'tb_tfa_script');
+    </script>
+    <!-- End of Taboola Pixel Code -->
 </head>
 
 <body>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1204286489736615&ev=PageView&noscript=1" /></noscript>
+
     <section class="main-section">
         <!-- TOP SECTION START-->
         <!-- <div class="bg"> -->
-            <div class="bg"></div>
-        <img src="./images/pie.webp" alt="פאי" class="bg-float u-desktop" width="374" height="374" l>
+        <div class="bg"></div>
+        <img src="./images/pie.webp" alt="פאי" class="bg-float u-desktop" width="374" height="374" loading="lazy">
         <header class="top-section" id="header" aria-label="top-section">
             <div class="footer-circle circle circle u-mobile">
                 <p class="circle-percentage">100%</p>
@@ -41,9 +104,9 @@
             <div class="top-right u-desktop">
                 <div class="top-right-item">
                     <picture>
-                        <source media="(max-width:1000px)" srcset="./images/5.webp" alt="תמונת רקע" class="main-bg"
+                        <source media="(max-width:1000px)" srcset="./images/5m.webp" alt="תמונת רקע" class="main-bg"
                             width="285" height="190">
-                    <img src="./images/5.webp" alt="לוגו" class="top-right-logo-img" width="732" height="488">
+                        <img src="./images/5.webp" alt="לוגו" class="top-right-logo-img" width="732" height="488">
                     </picture>
                     <!-- </a> -->
                 </div>
@@ -51,7 +114,8 @@
 
             <div class="top-left">
                 <div class="top-left-logo u-mobile">
-                    <img src="./images/logo-black.webp" alt="לוגו" class="top-right-logo-img" width="220.703" height="46.227"  >
+                    <img src="./images/logo-black.webp" alt="לוגו" class="top-right-logo-img" width="220.703"
+                        height="46.227">
                 </div>
                 <p class="text-green u-desktop">בעלי עסקים, הזדמנות עסקית שאסור לכם לפספס</p>
                 <p class="text-green u-mobile">בעלי עסקים,<br>
@@ -80,121 +144,129 @@
         <section class="carousel-section" aria-label="carousel-section">
             <h3 class="carousel-title">הזדמנויות עסקיות חמות עבורך</h3>
             <div class="slick-next">
-                <img src="./images/arrow.png" alt="arrow-right" class="arrow-right">
+                <img src="./images/arrow.png" alt="arrow-right" class="arrow-right" width="30" height="30">
             </div>
             <div class="carousel">
 
                 <li class="carousel__slide">
-                        <div class="icon">
-                            <img loading="lazy" width="40" height="40"
-                                src="./images/food.webp">
-                        </div>
-                            <p class="category">הסעדה</p>
-                            <p class="number">החל מ-<span class="text-green">900 </span>מכרזים
-                            </p>
-                            <p class="cta text-white bg-green"> לצפייה בכל
-                                <span class="u-desktop"> המכרזים</span>
-                            </p>
+                    <div class="icon">
+                        <img loading="lazy" width="40" height="40" src="./images/food.webp">
+                    </div>
+                    <p class="category">הסעדה</p>
+                    <p class="number">החל מ-<span class="text-green">900 </span>מכרזים
+                    </p>
+                    <p class="cta text-white bg-green"> לצפייה בכל
+                        המכרזים
+                        <!--<span class="u-desktop"> המכרזים</span>-->
+                    </p>
                 </li>
 
                 <li class="carousel__slide">
-                        <div class="icon">
-                            <img loading="lazy" width="40" height="40" src="./images/clean.webp">
-                        </div>
-                            <p class="category">ניקיון</p>
-                            <p class="number">החל מ-<span class="text-green">1,185 </span>מכרזים
-                            </p>
-                            <p class="cta text-white bg-green"> לצפייה בכל
-                                <span class="u-desktop"> המכרזים</span>
-                            </p>
+                    <div class="icon">
+                        <img loading="lazy" width="40" height="40" src="./images/clean.webp">
+                    </div>
+                    <p class="category">ניקיון</p>
+                    <p class="number">החל מ-<span class="text-green">1,185 </span>מכרזים
+                    </p>
+                    <p class="cta text-white bg-green"> לצפייה בכל
+                        המכרזים
+                        <!--<span class="u-desktop"> המכרזים</span>-->
+                    </p>
                 </li>
 
                 <li class="carousel__slide">
-                        <div class="icon">
-                            <img loading="lazy" width="40" height="40" src="./images/trash.webp">
-                        </div>
-                            <p class="category">פנוי פסולת</p>
-                            <p class="number">החל מ-<span class="text-green">970 </span>מכרזים
-                            </p>
-                            <p class="cta text-white bg-green"> לצפייה בכל
-                                <span class="u-desktop"> המכרזים</span>
-                            </p>
+                    <div class="icon">
+                        <img loading="lazy" width="40" height="40" src="./images/trash.webp">
+                    </div>
+                    <p class="category">פנוי פסולת</p>
+                    <p class="number">החל מ-<span class="text-green">970 </span>מכרזים
+                    </p>
+                    <p class="cta text-white bg-green"> לצפייה בכל
+                        המכרזים
+                        <!--<span class="u-desktop"> המכרזים</span>-->
+                    </p>
                 </li>
 
                 <li class="carousel__slide">
-                        <div class="icon">
-                            <img loading="lazy" width="40" height="40" src="./images/build.webp">
-                        </div>
-                            <p class="category">אחזקת מבנים</p>
-                            <p class="number">החל מ-<span class="text-green">1,000 </span>מכרזים
-                            </p>
-                            <p class="cta text-white bg-green"> לצפייה בכל
-                                <span class="u-desktop"> המכרזים</span>
+                    <div class="icon">
+                        <img loading="lazy" width="40" height="40" src="./images/build.webp">
+                    </div>
+                    <p class="category">אחזקת מבנים</p>
+                    <p class="number">החל מ-<span class="text-green">1,000 </span>מכרזים
+                    </p>
+                    <p class="cta text-white bg-green"> לצפייה בכל
+                        המכרזים
+                        <!--<span class="u-desktop"> המכרזים</span>-->
 
-                            </p>
+                    </p>
                 </li>
 
                 <li class="carousel__slide">
-                        <div class="icon">
-                            <img loading="lazy" width="40" height="40" src="./images/buss.webp">
-                        </div>
-                            <p class="category">הסעות</p>
-                            <p class="number">החל מ-<span class="text-green">900 </span>מכרזים
-                            </p>
-                            <p class="cta text-white bg-green"> לצפייה בכל
-                                <span class="u-desktop"> המכרזים</span>
-                            </p>
+                    <div class="icon">
+                        <img loading="lazy" width="40" height="40" src="./images/buss.webp">
+                    </div>
+                    <p class="category">הסעות</p>
+                    <p class="number">החל מ-<span class="text-green">900 </span>מכרזים
+                    </p>
+                    <p class="cta text-white bg-green"> לצפייה בכל
+                        המכרזים
+                        <!--<span class="u-desktop"> המכרזים</span>-->
+                    </p>
                 </li>
 
                 <li class="carousel__slide">
-                        <div class="icon">
-                            <img loading="lazy" width="40" height="40" src="./images/electric.webp">
-                        </div>
-                            <p class="category">חשמל</p>
-                            <p class="number">החל מ-<span class="text-green">970 </span>מכרזים
-                            </p>
-                            <p class="cta text-white bg-green"> לצפייה בכל
-                                <span class="u-desktop"> המכרזים</span>
+                    <div class="icon">
+                        <img loading="lazy" width="40" height="40" src="./images/electric.webp">
+                    </div>
+                    <p class="category">חשמל</p>
+                    <p class="number">החל מ-<span class="text-green">970 </span>מכרזים
+                    </p>
+                    <p class="cta text-white bg-green"> לצפייה בכל
+                        המכרזים
+                        <!--<span class="u-desktop"> המכרזים</span>-->
 
-                            </p>
+                    </p>
                 </li>
 
                 <li class="carousel__slide">
-                        <div class="icon">
-                            <img loading="lazy" width="40" height="40" src="./images/truck.webp">
-                        </div>
-                            <p class="category">בנייה</p>
-                            <p class="number">החל מ-<span class="text-green">7,000 </span>מכרזים
-                            </p>
-                            <p class="cta text-white bg-green"> לצפייה בכל
-                                <span class="u-desktop"> המכרזים</span>
+                    <div class="icon">
+                        <img loading="lazy" width="40" height="40" src="./images/truck.webp">
+                    </div>
+                    <p class="category">בנייה</p>
+                    <p class="number">החל מ-<span class="text-green">7,000 </span>מכרזים
+                    </p>
+                    <p class="cta text-white bg-green"> לצפייה בכל
+                        המכרזים
+                        <!--<span class="u-desktop"> המכרזים</span>-->
 
-                            </p>
+                    </p>
                 </li>
 
                 <li class="carousel__slide">
-                        <div class="icon">
-                            <img loading="lazy" width="40" height="40" src="./images/idk.webp">
-                        </div>
-                            <p class="category">וראיית כספים</p>
-                            <p class="number">החל מ-<span class="text-green">1,500 </span>מכרזים
-                            </p>
-                            <p class="cta text-white bg-green"> לצפייה בכל
-                                <span class="u-desktop"> המכרזים</span>
-                            </p>
+                    <div class="icon">
+                        <img loading="lazy" width="40" height="40" src="./images/idk.webp">
+                    </div>
+                    <p class="category">כספים וראיית חשבון</p>
+                    <p class="number">החל מ-<span class="text-green">1,500 </span>מכרזים
+                    </p>
+                    <p class="cta text-white bg-green"> לצפייה בכל
+                        המכרזים
+                        <!--<span class="u-desktop"> המכרזים</span>-->
+                    </p>
                 </li>
 
                 <li class="carousel__slide">
-                        <div class="icon">
-                            <img loading="lazy" width="40" height="40" src="./images/clean.webp">
-                        </div>
-                            <p class="category">מכרזים בתחומים נוספים</p>
-                            <p class="number">החל מ-<span class="text-green">970 </span>מכרזים
-                            </p>
-                            <p class="cta text-white bg-green"> לצפייה בכל
-                                <span class="u-desktop"> המכרזים</span>
+                    <div class="icon">
+                        <img loading="lazy" width="40" height="40" src="./images/clean.webp">
+                    </div>
+                    <p class="category">מכרזים בתחומים נוספים</p>
+                    <p class="number">החל מ-<span class="text-green">970 </span>מכרזים
+                    </p>
+                    <p class="cta text-white bg-green"> לצפייה בכל
+                        המכרזים
+                        <!--<span class="u-desktop"> המכרזים</span>-->
 
-                            </p>
+                    </p>
                 </li>
             </div>
         </section>
@@ -203,7 +275,8 @@
         <!-- ABOUT SECTION END-->
         <section class="about-section" aria-label="about-section">
             <div class="about-right">
-                <img src="./images/brush.png" alt="למה-1" class="about-right-image" width="430" height="215" loading="lazy">
+                <img src="./images/brush.png" alt="למה-1" class="about-right-image" width="430" height="215"
+                    loading="lazy">
                 <div class="centered">
                     <p class="about-title">יפעת מכרזים</p>
                     <p class="about-subtitle">מערכת המכרזים וההזדמנויות העסקיות המובילה והגדולה בישראל!</p>
@@ -215,7 +288,7 @@
                     העסקיות החמות, מכרזים
                     ממשלתיים ובלעדיים ומידע על כל מה שקורה בענף שלכם פשוט כך, על מגש של כסף ישירות למייל
                 </p>
-                <div class="bg-green text-white"  onclick="moveTo()">אז, מה הפלוסים שלנו?</div >
+                <div class="bg-green text-white" onclick="moveTo()">אז, מה הפלוסים שלנו?</div>
             </div>
 
         </section>
@@ -223,25 +296,25 @@
         <!-- ADVANTAGE SECTION START-->
         <section class="advantage-section">
             <!-- <div class="advantage-container"> -->
-                <h4 class="advantage-title">היתרונות שלנו להצלחה העסקית שלכם!</h4>
-                <p class="advantage-text">
-                    מאות הזדמנויות ומכרזים ממשלתיים ובלעדיים שמפורסמים רק אצלנו.<br><br>
-                    בניה, הסעדה, אחזקה, ניקיון, הסעות, ראיית חשבון וכספים, פינוי פסולת, מקרקעין, חשמל ועוד... 74 קטגוריות
-                    כלכליות במשק קבלת ההזדמנויות ישירות למייל באמצעות סוכן חכם.<br><br>
-                    מכרזים מותאמים לעסקים קטנים ובינוניים <br>
-                    עשרות קטגוריות בהתאם לענף בו אתם פועלים.<br><br>
-                    ליווי להגשת מכרז ראשון ע"י המומחים שלנו – ללא עלות נוספת ומודיעין עסקי חיוני נוסף לעסק שלך
-                </p>
-                <p class="advantage-dont-miss">
-                    אל תפספסו את ההזדמנות!
-                </p>
+            <h4 class="advantage-title">היתרונות שלנו להצלחה העסקית שלכם!</h4>
+            <p class="advantage-text">
+                מאות הזדמנויות ומכרזים ממשלתיים ובלעדיים שמפורסמים רק אצלנו.<br><br>
+                בניה, הסעדה, אחזקה, ניקיון, הסעות, ראיית חשבון וכספים, פינוי פסולת, מקרקעין, חשמל ועוד... 74 קטגוריות
+                כלכליות במשק קבלת ההזדמנויות ישירות למייל באמצעות סוכן חכם.<br><br>
+                מכרזים מותאמים לעסקים קטנים ובינוניים <br>
+                עשרות קטגוריות בהתאם לענף בו אתם פועלים.<br><br>
+                ליווי להגשת מכרז ראשון ע"י המומחים שלנו – ללא עלות נוספת ומודיעין עסקי חיוני נוסף לעסק שלך
+            </p>
+            <p class="advantage-dont-miss">
+                אל תפספסו את ההזדמנות!
+            </p>
             <!-- </div> -->
         </section>
         <!-- ADVANTAGE SECTION END-->
 
         <!-- MOBILE CTA START-->
-        <div class="mobile-cta text-white">
-            <a href="tel:03-5635050" class="mobile-cta-right  bg-green">
+        <div class="mobile-cta text-white" id="mobile-cta">
+            <a href="tel:072-3944129" class="mobile-cta-right  bg-green">
                 <img src="./images/phone.webp" alt="טלפון" class="mobile-cta-right-icon" width="30" height="30"
                     load="lazy">
                 <p class="mobile-cta-title">חייגו <br>לנציג</p>
@@ -256,16 +329,16 @@
 
     <!-- FOOTER SECTION START-->
     <footer class="footer-section" aria-label="footer-section">
-        <div class="u-mobile close" id="close" >X</div>
+        <div class="u-mobile close" id="close">X</div>
         <div class="footer-circle circle">
             <p class="circle-percentage">100%</p>
             <p class="circle-text text-white">מהמכרזים בישראל ישירות למייל שלך</p>
         </div>
-        <img class="footer-logo" width="229" height="118" src="./images/logo.webp" alt="לוגו">
+        <img class="footer-logo" width="229" height="118" src="./images/logo.webp" alt="לוגו" loading="lazy">
         <div class="footer-text">
             <p class="footer-title text-green">יפעת מכרזים בהטבה ענקית וחד פעמית</p>
             <p class="footer-subtitle text-white">סוגרים עכשיו מנוי שנתי ונהנים מחודשיים במתנה + *ליווי מכרז ראשון ללא
-                עלות בתוקף עד ה-30.5 </p>
+                עלות בתוקף עד ה-31.7 </p>
         </div>
         <h5 class="text-white form-main-title">לקבלת גישה לכל המכרזים השאירו פרטים</h5>
         <form id="form" class="form form-main">
@@ -276,7 +349,7 @@
             <input type="hidden" id="campaign" name="pcfsystemfield52" value="" class="campaign">
             <input type="hidden" id="pcfsystemfield46" value="" name="pcfsystemfield46">
             <div class="form-row">
-                <select name="customer" id="customer" >
+                <select name="customer" id="customer">
                     <option value="" selected="selected" class="gf_placeholder">האם אתה לקוח קיים?</option>
                     <option value="yes">כן, מעוניין לקבל שירות</option>
                     <option value="no">לא, אני רוצה להצטרף</option>
@@ -286,8 +359,7 @@
                 <input name="accountname" id="name" type="text" value="" class="medium" placeholder="שם מלא">
             </div>
             <div class="form-row">
-                <input name="telephone1" id="phone" type="tel" value="" class="medium"
-                    placeholder="טלפון לחזרה">
+                <input name="telephone1" id="phone" type="tel" value="" class="medium" placeholder="טלפון לחזרה">
             </div>
             <div class="form-row">
                 <input type="email" id="email" name="emailaddress1" value="" placeholder="אימייל">
@@ -302,7 +374,7 @@
             </div>
 
             <div class="text-white contactid">
-                <p>המוקד סגור כעת 
+                <p>המוקד סגור כעת
                     השאירו פרטים ונחזור אליכם בהקדם
                 </p>
 
@@ -326,18 +398,15 @@
 
     <script defer type="text/javascript" src="./js/slick/slick/slick.min.js"></script>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ouibounce/0.0.11/ouibounce.min.js"></script> -->
-    <!-- <script defer type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 
-
-    <!-- <script defer type="text/javascript" src="./js/zepto.min.js"></script> -->
     <!-- <script defer type="text/javascript" src="./dist/main.js"></script> -->
 
 
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script type="text/javascript" src="https://onandoff.co.il/onAndOff.js"> </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer type="text/javascript" src="https://onandoff.co.il/onAndOff.js"> </script>
     <script>
-        function moveTo(event) { debugger;window.scrollTo(0, document.body.scrollHeight); }
+        function moveTo(event) { debugger; window.scrollTo(0, document.body.scrollHeight); }
     </script>
 
     <script>
@@ -350,7 +419,7 @@
                     $('.divhidden').fadeOut(300);
                 }
             });
-             timerPlus("5e2d900e4369e40017de9383");
+            timerPlus("5e2d900e4369e40017de9383");
         });
     </script>
     <script>
@@ -360,14 +429,19 @@
                 var data = $(this).serialize();
                 $.ajax({
                     type: "POST",
-                    url: './mail.php',
+                    url: 'https://app.powerlink.co.il/web/webtoaccount.aspx',
                     data: data,
-                    success: function (mail) {
-                        alert('הפרטים נשלחו בהצלחה');
-                        // window.location.href = 'thankyou.html';
+                    success: function (answer) {
+                        $.ajax({
+                            type: "POST",
+                            url: 'mail.php',
+                            data: data,
+                            success: function (mail) {
+                                window.location.href = 'thanks.html';
+                            }
+                        });
                     }
                 });
-
             });
         });
     </script>
@@ -378,48 +452,90 @@
     </script> -->
     <script>
 
-    //   //get url params
-    //   $( document ).ready(function() {
-    //     const queryString = window.location.search
-    //       try{
-    //           const urlParams = new URLSearchParams(queryString)
-    //           const campaign = urlParams.get('campaign')
-    //           const keyword = urlParams.get('keyword')
-    //           const utmSource = urlParams.get('utm-source')
-    //           if(!utmSource){
-    //               let inputCampaign = document.getElementsByClassName('campaign')
-    //               let inputTerm = document.getElementsByClassName('term')
-    //               let campaignArray = [...inputCampaign]
-    //               let termArray = [...inputTerm]
-    //               campaignArray.map(item => (item.value = campaign))
-    //               termArray.map(item => (item.value = keyword))
-    //               //ONANDOFF FUNCTION START
-    //               timerPlus("5e2d900e4369e40017de9383");
-    //           }
-    //           else{
-    //               let phone = $("a[href='tel:072-3944129']")
-    //               let phoneArray = [...phone]
-    //                 phoneArray.map(item =>{
-    //                     item.href = "tel:0747691374"
-    //                     if(item.innerHTML !== " חייג לנציג "){
-    //                         item.innerHTML = "לנציג מכירות ללא המתנה חייגו :<br>074-7691374"
-    //                     }
-    //                 })
-                    
-    //                 let originatingleadcode = $("input[name=originatingleadcode]")
-    //                 originatingleadcode.each(function() {
-    //                     $(this).val('51');
-    //                 })
-    //               //ONANDOFF FUNCTION START
-    //               timerPlus("607c0b19080fb70017a6d963");
-    //           }
-    //       }
-    //       catch(err) {
-              
-    //       }
-    //   })
-      
+        //get url params
+        document.addEventListener("DOMContentLoaded", function () {
+            const queryString = window.location.search
+            try {
+                const urlParams = new URLSearchParams(queryString)
+                const campaign = urlParams.get('campaign')
+                const keyword = urlParams.get('keyword')
+                const utmSource = urlParams.get('utm-source')
+                //   if(!utmSource){
+                let inputCampaign = document.getElementsByClassName('campaign')
+                let inputTerm = document.getElementsByClassName('term')
+                let campaignArray = [...inputCampaign]
+                let termArray = [...inputTerm]
+                campaignArray.map(item => (item.value = campaign))
+                termArray.map(item => (item.value = keyword))
+                //ONANDOFF FUNCTION START
+                timerPlus("5e2d900e4369e40017de9383");
+                //   }
+                //   else{
+                //       let phone = $("a[href='tel:072-3944129']")
+                //       let phoneArray = [...phone]
+                //         phoneArray.map(item =>{
+                //             item.href = "tel:0747691374"
+                //             if(item.innerHTML !== " חייג לנציג "){
+                //                 item.innerHTML = "לנציג מכירות ללא המתנה חייגו :<br>074-7691374"
+                //             }
+                //         })
+
+                //         let originatingleadcode = $("input[name=originatingleadcode]")
+                //         originatingleadcode.each(function() {
+                //             $(this).val('51');
+                //         })
+                //       //ONANDOFF FUNCTION START
+                //       timerPlus("607c0b19080fb70017a6d963");
+                //   }
+            }
+            catch (err) {
+
+            }
+        })
+
     </script>
+    <script>
+        const isServiceOpen = () => {
+            var Now = new Date(),
+                CurrentDay = Now.getDay(),
+                OpeningTime = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 9, 00),
+                ClosingTime = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 17, 00),
+                Open = (Now.getTime() > OpeningTime.getTime() && Now.getTime() < ClosingTime.getTime());
+            closingTimeF = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 13, 30),//friday
+                OpenF = Now.getTime() < closingTimeF.getTime(),//friday
+
+                ClosingTimeHoliday = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 13, 00),
+                isHoliday = false
+            // if (CurrentDay !== 6 && CurrentDay !== 5 && Open || CurrentDay === 5 && OpenF) {
+            if (CurrentDay !== 6 && CurrentDay !== 5 && Open) {//no friday
+                if ((Now.getTime() >= ClosingTimeHoliday && isHoliday)) {
+                    return false
+                }
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (!isServiceOpen()) {
+                $('#mobile-cta').html(`
+                    <div class="mobile-cta-left bg-black" id="ctaButton" style="display: flex;align-items: center;justify-content: center;">
+                        <a href="#" class=" text-white" style="gap: 1.5rem;">
+                        <p style="font-size:4rem;line-height:4rem;font-family;font-family:'rubikBold';">להשארת פרטים </p>
+                         לחצו כאן</a>
+                    </div>`
+                );
+            }
+        });
+    </script>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="display:none;border-style:none;" alt=""
+                src="//clk.anticlickfraudsystem.com/Click?customer_id=NzktMT87NjA3Nw==" />
+        </div>
+    </noscript>
 </body>
 
 </html>
