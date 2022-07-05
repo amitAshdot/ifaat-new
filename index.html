@@ -337,7 +337,9 @@
         <img class="footer-logo" width="229" height="118" src="./images/logo.webp" alt="לוגו" loading="lazy">
         <div class="footer-text">
             <p class="footer-title text-green">יפעת מכרזים בהטבה ענקית וחד פעמית</p>
-            <p class="footer-subtitle text-white">סוגרים עכשיו מנוי שנתי ונהנים מחודשיים במתנה + *ליווי מכרז ראשון ללא
+            <p class="footer-subtitle text-white">סוגרים עכשיו מנוי שנתי ונהנים
+                מחודשיים במתנה
+                + *ליווי מכרז ראשון ללא
                 עלות בתוקף עד ה-31.7 </p>
         </div>
         <h5 class="text-white form-main-title">לקבלת גישה לכל המכרזים השאירו פרטים</h5>
@@ -420,7 +422,10 @@
         );
         let day = lastDayCurrentMonth.getUTCDate();
         let month = lastDayCurrentMonth.getMonth();
-        let element = document.getElementsByClassName('footer-subtitle')[0].innerHTML = `סוגרים עכשיו מנוי שנתי ונהנים מחודשיים במתנה + *ליווי מכרז ראשון ללא
+        let element = document.getElementsByClassName('footer-subtitle')[0].innerHTML = `
+        סוגרים עכשיו מנוי שנתי ונהנים 
+        <span class="border-bottom-secondary bold">מחודשיים במתנה</span>
+        + *ליווי מכרז ראשון ללא
                 עלות בתוקף עד ה-${day + 1}.${month + 1}`;
     </script>
 
