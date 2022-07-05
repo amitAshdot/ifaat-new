@@ -406,7 +406,22 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer type="text/javascript" src="https://onandoff.co.il/onAndOff.js"> </script>
     <script>
-        function moveTo(event) { debugger; window.scrollTo(0, document.body.scrollHeight); }
+        function moveTo(event) { window.scrollTo(0, document.body.scrollHeight); }
+
+        function getLastDayOfMonth(year, month) {
+            return new Date(year, month + 1, 0);
+        }
+
+        const date = new Date();
+
+        const lastDayCurrentMonth = getLastDayOfMonth(
+            date.getFullYear(),
+            date.getMonth(),
+        );
+        let day = lastDayCurrentMonth.getUTCDate();
+        let month = lastDayCurrentMonth.getMonth();
+        let element = document.getElementsByClassName('footer-subtitle')[0].innerHTML = `סוגרים עכשיו מנוי שנתי ונהנים מחודשיים במתנה + *ליווי מכרז ראשון ללא
+                עלות בתוקף עד ה-${day + 1}.${month + 1}`;
     </script>
 
     <script>
