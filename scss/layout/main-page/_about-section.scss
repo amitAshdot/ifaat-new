@@ -113,12 +113,21 @@
             left: 50%;
             bottom: 0;
             text-decoration: none;
+            border: 1px solid;
+
+            transition: all 0.3s;
 
             @include respond(tab-port) {
                 transform: translate(-50%, 14rem);
                 font-size: 4.5rem;
                 padding-block: 1rem;
                 width: 88%;
+            }
+
+            &:hover {
+                color: $color-primary;
+                background-color: $color-white;
+                border: 1px solid;
             }
         }
     }

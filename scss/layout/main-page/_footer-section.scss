@@ -20,6 +20,7 @@
             display: none;
             width: 100%;
             z-index: 20;
+            overflow: auto;
         }
 
         & .close {
@@ -135,6 +136,10 @@
 }
 
 .form {
+    &.active {
+        animation: horizontal-shaking 0.5s;
+    }
+
     &-main {
         position: relative;
         padding-inline-start: 3.5rem;
@@ -288,11 +293,20 @@
             margin-block-start: 2rem;
             margin-block-end: 2rem;
             cursor: pointer;
+            border: solid 1px;
+
+            transition: all 0.3s;
 
             @include respond(tab-port) {
                 font-size: 5.5rem;
                 padding-block: 3rem;
                 margin-block-end: 11rem;
+            }
+
+            &:hover {
+                color: $color-secondary;
+                background-color: $color-black;
+                border: solid 1px;
             }
         }
     }
@@ -346,6 +360,8 @@
         margin-block-end: 1rem;
 
         @include respond(tab-port) {
+            margin-block-end: 45rem;
+
             & a {
                 font-size: 4rem;
                 line-height: initial;

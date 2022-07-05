@@ -40,7 +40,8 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css">
 
     <!--<script id="ptoken" src="https://ws.callindex.co.il/campaign/send_analytics.js?ptoken=850"></script>-->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="https://unpkg.com/axios@0.27.2/dist/axios.min.js"></script>
     <script type='text/javascript' src='https://onandoff.co.il/onAndOff.js'> </script>
 </head>
 
@@ -284,7 +285,7 @@
                 עלות בתוקף עד ה-31.7 </p>
         </div>
         <h5 class="text-white form-main-title">לקבלת גישה לכל המכרזים השאירו פרטים</h5>
-        <form id="form" class="form form-main">
+        <form id="form" class="form form-main" method="post">
             <input type="hidden" id="uid" name="uid" value="FA470709-56A1-4A8F-BC1C-4643AD78481F">
             <input type="hidden" id="originatingleadcode" name="originatingleadcode" value="8">
             <input type="hidden" id="statuscode" name="statuscode" value="15">
@@ -308,12 +309,12 @@
                 <input type="email" id="email" name="emailaddress1" value="" placeholder="אימייל">
             </div>
             <div class="form-row">
-                <input type="submit" id="submit" class="shake gform_button button" value="התחילו לקבל מכרזים">
+                <input type="submit" id="submit" class="form_button button" value="התחילו לקבל מכרזים">
             </div>
             <div class="message" id="message"></div>
             <div class="divhidden">
                 <p>לקוחות קיימים</p>
-                <a href="#">למידע נוסף לחצ/י כאן</a>
+                <a href="https://www.tenders.co.il/home">למידע נוסף לחצ/י כאן</a>
             </div>
 
             <div class="text-white contactid">
@@ -333,8 +334,6 @@
     <script defer type="text/javascript" src="./js/scripts.js"></script>
     <script defer type="text/javascript" src="./js/jquery.min.js"></script>
     <script defer type="text/javascript" src="./js/slick/slick/slick.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer type="text/javascript" src="https://onandoff.co.il/onAndOff.js"> </script>
     <script>
         function moveTo(event) { window.scrollTo(0, document.body.scrollHeight); }
 
@@ -367,83 +366,34 @@
                     $('.divhidden').fadeOut(300);
                 }
             });
-            timerPlus("5e2d900e4369e40017de9383");
         });
     </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            $('#form').submit(function (e) {
-                e.preventDefault();
-                var data = $(this).serialize();
-                $.ajax({
-                    type: "POST",
-                    url: 'https://app.powerlink.co.il/web/webtoaccount.aspx',
-                    data: data,
-                    success: function (answer) {
-                        $.ajax({
-                            type: "POST",
-                            url: 'mail.php',
-                            data: data,
-                            success: function (mail) {
-                                window.location.href = 'thanks.html';
-                            }
-                        });
+
+            const isServiceOpen = () => {
+                var Now = new Date(),
+                    CurrentDay = Now.getDay(),
+                    OpeningTime = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 9, 00),
+                    ClosingTime = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 17, 00),
+                    Open = (Now.getTime() > OpeningTime.getTime() && Now.getTime() < ClosingTime.getTime());
+                closingTimeF = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 13, 30),//friday
+                    OpenF = Now.getTime() < closingTimeF.getTime(),//friday
+
+                    ClosingTimeHoliday = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 13, 00),
+                    isHoliday = false
+                // if (CurrentDay !== 6 && CurrentDay !== 5 && Open || CurrentDay === 5 && OpenF) {
+                if (CurrentDay !== 6 && CurrentDay !== 5 && Open) {//no friday
+                    if ((Now.getTime() >= ClosingTimeHoliday && isHoliday)) {
+                        return false
                     }
-                });
-            });
-        });
-    </script>
-    <script>
-
-        //get url params
-        document.addEventListener("DOMContentLoaded", function () {
-            const queryString = window.location.search
-            try {
-                const urlParams = new URLSearchParams(queryString)
-                const campaign = urlParams.get('campaign')
-                const keyword = urlParams.get('keyword')
-                const utmSource = urlParams.get('utm-source')
-                //   if(!utmSource){
-                let inputCampaign = document.getElementsByClassName('campaign')
-                let inputTerm = document.getElementsByClassName('term')
-                let campaignArray = [...inputCampaign]
-                let termArray = [...inputTerm]
-                campaignArray.map(item => (item.value = campaign))
-                termArray.map(item => (item.value = keyword))
-                //ONANDOFF FUNCTION START
-                timerPlus("5e2d900e4369e40017de9383");
-            }
-            catch (err) {
-
-            }
-        })
-
-    </script>
-    <script>
-        const isServiceOpen = () => {
-            var Now = new Date(),
-                CurrentDay = Now.getDay(),
-                OpeningTime = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 9, 00),
-                ClosingTime = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 17, 00),
-                Open = (Now.getTime() > OpeningTime.getTime() && Now.getTime() < ClosingTime.getTime());
-            closingTimeF = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 13, 30),//friday
-                OpenF = Now.getTime() < closingTimeF.getTime(),//friday
-
-                ClosingTimeHoliday = new Date(Now.getFullYear(), Now.getMonth(), Now.getDate(), 13, 00),
-                isHoliday = false
-            // if (CurrentDay !== 6 && CurrentDay !== 5 && Open || CurrentDay === 5 && OpenF) {
-            if (CurrentDay !== 6 && CurrentDay !== 5 && Open) {//no friday
-                if ((Now.getTime() >= ClosingTimeHoliday && isHoliday)) {
-                    return false
+                    return true;
                 }
-                return true;
+                else {
+                    return false;
+                }
             }
-            else {
-                return false;
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
             if (!isServiceOpen()) {
                 $('#mobile-cta').html(`
                     <div class="mobile-cta-left bg-black" id="ctaButton" style="display: flex;align-items: center;justify-content: center;">
@@ -453,8 +403,9 @@
                     </div>`
                 );
             }
-        });
+        })
     </script>
+
     <noscript>
         <div style="display:inline;">
             <img height="1" width="1" style="display:none;border-style:none;" alt=""

@@ -1,91 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // -----START ISONSCREEN-----
-    // // Helper function from: http://stackoverflow.com/a/7557433/274826
-    // const isElementInViewport = el => {
-    //     const pixFromElementTop = 1;
-    //     // special bonus for those using jQuery
-    //     if (typeof jQuery === "function" && el instanceof jQuery) {
-    //         el = el[0];
-    //     }
-    //     let rect = el.getBoundingClientRect();
-    //     return (
-    //         (rect.top + pixFromElementTop <= 0 && rect.bottom >= 0) ||
-    //         (rect.bottom + pixFromElementTop >=
-    //             (window.innerHeight || document.documentElement.clientHeight) &&
-    //             rect.top + pixFromElementTop <=
-    //             (window.innerHeight || document.documentElement.clientHeight)) ||
-    //         (rect.top + pixFromElementTop >= 0 &&
-    //             rect.bottom + pixFromElementTop <=
-    //             (window.innerHeight || document.documentElement.clientHeight))
-    //     );
-    // };
-    // // Detect request animation frame
-    // let scroll =
-    //     window.requestAnimationFrame ||
-    //     // IE Fallback
-    //     function (callback) {
-    //         window.setTimeout(callback, 1000 / 60);
-    //     };
-    // let elementsToShow = document.querySelectorAll(".show-on-scroll");
-
-    // const loop = () => {
-    //     Array.prototype.forEach.call(elementsToShow, function (element) {
-    //         if (isElementInViewport(element)) {
-    //             element.classList.add("is-visible");
-    //         } else {
-    //             element.classList.remove("is-visible");
-    //         }
-    //     });
-    //     scroll(loop);
-    // };
-
-    // // Call the loop for the first time
-    // loop();
-
-    // -----END ISONSCREEN-----
-
     // -----START URL PARAMS-----
-    //get url params
+    try {
+        //ONANDOFF FUNCTION START
+        timerPlus("5e2d900e4369e40017de9383");
+        const queryString = window.location.search
+        const urlParams = new URLSearchParams(queryString)
+        const campaign = urlParams.get('campaign')
+        const keyword = urlParams.get('keyword')
+        // const utmSource = urlParams.get('utm-source')
+        //   if(!utmSource){
+        let inputCampaign = document.getElementsByClassName('campaign')
+        let inputTerm = document.getElementsByClassName('term')
+        let campaignArray = [...inputCampaign]
+        let termArray = [...inputTerm]
+        campaignArray.map(item => (item.value = campaign))
+        termArray.map(item => (item.value = keyword))
+    }
+    catch (err) {
 
-    //get url params
-    // const queryString = window.location.search
-    // try {
-    //     const urlParams = new URLSearchParams(queryString)
-    //     const campaign = urlParams.get('campaign')
-    //     const keyword = urlParams.get('keyword')
-    //     const utmSource = urlParams.get('utm-source')
-    //     if (!utmSource) {
-    //         let inputCampaign = document.getElementsByClassName('campaign')
-    //         let inputTerm = document.getElementsByClassName('term')
-    //         let campaignArray = [...inputCampaign]
-    //         let termArray = [...inputTerm]
-    //         campaignArray.map(item => (item.value = campaign))
-    //         termArray.map(item => (item.value = keyword))
-    //         //ONANDOFF FUNCTION START
-    //         timerPlus("5e2d900e4369e40017de9383");
-    //     }
-    //     else {
-    //         let phone = $("a[href='tel:072-3944129']")
-    //         let phoneArray = [...phone]
-    //         phoneArray.map(item => {
-    //             item.href = "tel:0747691374"
-    //             if (item.innerHTML !== " חייג לנציג ") {
-    //                 item.innerHTML = "לנציג מכירות ללא המתנה חייגו :<br>074-7691374"
-    //             }
-    //         })
+    }
+    // -----END URL PARAMS-----
 
-    //         let originatingleadcode = $("input[name=originatingleadcode]")
-    //         originatingleadcode.each(function () {
-    //             $(this).val('51');
-    //         })
-    //         //ONANDOFF FUNCTION START
-    //         timerPlus("607c0b19080fb70017a6d963");
-    //     }
-    // }
-    // catch (err) {
-
-    // }
-    // // -----END URL PARAMS-----
     // -----START EMAIL VALIDATION-----
     const isNumberKey = (evt) => {
         let charCode = (evt.which) ? evt.which : evt.keyCode
@@ -102,9 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const validatePhone = (phone) => {
-        // const re = /^[0-9]{10}$/;
         const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
-
         return re.test(String(phone));
     }
 
@@ -135,17 +68,44 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         return flag ? false : true;
     }
-    const submitForm = (e) => {
+    // const submitForm = (e) => {
+    //     if (validateForm()) {
+    //         return true
+    //     } else {
+    //         e.preventDefault();
+    //         return false
+    //     }
+    // }
+    // document.getElementById("form").addEventListener("submit", submitForm);
+    // -----END EMAIL VALIDATION-----
+
+    // -----START EMAIL SUBMIT-----
+    $('#form').submit(function (e) {
         if (validateForm()) {
+            e.preventDefault();
+            var data = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: 'https://app.powerlink.co.il/web/webtoaccount.aspx',
+                data: data,
+                success: function (answer) {
+                    $.ajax({
+                        type: "POST",
+                        url: 'mail.php',
+                        data: data,
+                        success: function (mail) {
+                            window.location.href = 'thanks.html';
+                        }
+                    });
+                }
+            });
             return true
         } else {
             e.preventDefault();
             return false
         }
-    }
-    document.getElementById("form").addEventListener("submit", submitForm);
-    // -----END EMAIL VALIDATION-----
-
+    });
+    // -----END EMAIL SUBMIT-----
 
 
     // -----START CAROUSEL-----
@@ -157,15 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesToScroll: 3,
         nextArrow: $('.slick-next'),
         responsive: [
-            // {
-            //     breakpoint: 1920,
-            //     settings: {
-            //         slidesToShow: 5.5,
-            //         slidesToScroll: 3,
-            //         infinite: true,
-            //         dots: true
-            //     }
-            // },
             {
                 breakpoint: 900,
                 settings: {
@@ -193,25 +144,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     document.getElementById("close").addEventListener("click", toggleCta);
     document.getElementById("ctaButton").addEventListener("click", toggleCta);
-
     // -----END toggleCta CTA-----
 
     // -----START ONCLICK CAROUSEL-----
-
     const onClickCarousel = (e) => {
         let screenWidth = window.innerWidth;
         if (screenWidth < 900) {
             toggleCta()
         } else {
-
+            $('form').addClass('active');
             $("#name").focus();
         }
     }
-
-
     $('.cta').click(onClickCarousel);
-
-
     // -----END ONCLICK CAROUSEL-----
 
+    // -----START SCROLL ON CLICK-----
+    $('input').focus(function () {
+        $('footer').animate({ scrollTop: 1000 }, 'slow');
+        return false;
+    });
+    // -----END SCROLL ON CLICK-----
 });
