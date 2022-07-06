@@ -45,15 +45,31 @@
             right: 50%;
         }
 
+        &-container {
+            transition: 0.8s width ease-in-out;
+
+            &.show-on-scroll {
+                width: 0;
+            }
+
+            &.is-visible {
+                width: 25vw;
+
+                @include respond(tab-port) {
+                    width: 85rem;
+                }
+            }
+        }
+
         &-image {
             width: 24rem;
             height: 12rem;
             z-index: -1;
 
             @include respond(tab-port) {
-                width: 109%;
+                width: 79rem;
                 height: auto;
-                transform: translate(6rem, 0rem);
+                transform: translate(0rem, 0rem);
             }
         }
 
@@ -69,9 +85,19 @@
             transform: translate(-75%, -60%);
             text-align: center;
             color: $color-black;
+            transition: all 0.5s 0.8s;
 
             @include respond(tab-port) {
                 transform: translate(-50%, -15.5rem);
+            }
+
+
+            &.show-on-scroll {
+                opacity: 0;
+            }
+
+            &.is-visible {
+                opacity: 1;
             }
         }
     }
@@ -114,7 +140,7 @@
             bottom: 0;
             text-decoration: none;
             border: 1px solid;
-
+            cursor: pointer;
             transition: all 0.3s;
 
             @include respond(tab-port) {
